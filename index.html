@@ -3,15 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HolisticVox – Natural Healing, Holistic Wellness & Conscious Living</title>
-<meta name="description" content="HolisticVox is a bilingual platform for evidence-informed natural wellness education, holistic living, curated wellness products, and healing recipes.">
-<meta property="og:title" content="HolisticVox – Natural Healing & Holistic Wellness">
-<meta property="og:description" content="Your bilingual sanctuary for evidence-informed natural wellness education, holistic living, and curated wellness products.">
+<title>HolisticVox – Natural Wellness Education, Holistic Living & Healing Recipes</title>
+<meta name="description" content="HolisticVox is a bilingual natural wellness education platform with evidence-based articles, holistic health resources, healing recipes, vetted wellness products, and practitioner guidance.">
+<meta name="keywords" content="HolisticVox, holistic wellness, natural remedies, evidence-based wellness, natural health education, healing recipes, herbal remedies, gut health, sleep support, stress relief, longevity, holistic living, bienestar natural, remedios naturales, salud holistica, recetas saludables">
+<meta name="author" content="HolisticVox">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#485C48">
+<meta property="og:title" content="HolisticVox – Natural Wellness Education & Holistic Living">
+<meta property="og:description" content="Bilingual natural wellness education, healing recipes, evidence-based holistic articles, vetted wellness products, and practitioner resources.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://holisticvox.com/">
+<meta property="og:image" content="https://holisticvox.com/images/hero-main.jpg">
+<meta property="og:site_name" content="HolisticVox">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HolisticVox – Natural Wellness Education & Holistic Living">
+<meta name="twitter:description" content="Evidence-based holistic wellness articles, healing recipes, bilingual resources, and curated natural health products.">
+<meta name="twitter:image" content="https://holisticvox.com/images/hero-main.jpg">
 <link rel="canonical" href="https://holisticvox.com/">
+<link rel="alternate" hreflang="en" href="https://holisticvox.com/">
+<link rel="alternate" hreflang="es" href="https://holisticvox.com/?lang=es">
+<link rel="alternate" hreflang="x-default" href="https://holisticvox.com/">
 <link rel="icon" href="images/holisticvox-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://holisticvox.com/#organization",
+      "name": "HolisticVox",
+      "url": "https://holisticvox.com/",
+      "logo": "https://holisticvox.com/images/holisticvox-icon.png",
+      "description": "Bilingual natural wellness education, holistic living resources, healing recipes, and curated wellness product guidance."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://holisticvox.com/#website",
+      "url": "https://holisticvox.com/",
+      "name": "HolisticVox",
+      "publisher": { "@id": "https://holisticvox.com/#organization" },
+      "inLanguage": ["en", "es"],
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://holisticvox.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQFSWSBJ20"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-PQFSWSBJ20');</script>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
@@ -77,6 +117,7 @@ p{line-height:1.75}
 .nav-links{display:none;gap:14px;list-style:none;flex:1;justify-content:center;align-items:center}
 .nav-links a,.nav-links>li>button{font-size:.82rem;font-weight:500;color:var(--muted);transition:color .2s;background:none;border:none;padding:0;display:flex;align-items:center;gap:4px;white-space:nowrap;cursor:pointer}
 .nav-links a:hover,.nav-links>li>button:hover{color:var(--primary)}
+.nav-links a.nav-active,.nav-links>li>button.nav-active{color:var(--primary);font-weight:700}
 .w-drop{position:relative}
 .w-menu{display:none!important}
 .w-drop:hover .w-menu{display:none!important}
@@ -110,6 +151,7 @@ p{line-height:1.75}
 .d-lbl{font-size:.63rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:7px 16px 3px;display:block}
 .d-lnk{display:flex;align-items:center;gap:9px;padding:10px 16px;font-size:.9rem;font-weight:500;color:var(--text);border:none;background:none;width:100%;text-align:left;cursor:pointer;transition:all .15s}
 .d-lnk:hover{color:var(--primary);background:rgba(72,92,72,.05)}
+.d-lnk.nav-active{color:var(--primary);background:rgba(72,92,72,.08);font-weight:700}
 .d-acts{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
 
 /* PAGES */
@@ -236,6 +278,7 @@ div.art-page-hero{display:flex;align-items:flex-end}
 .rec-card{background:var(--card);border-radius:var(--r);border:1px solid var(--border);box-shadow:var(--sh-s);overflow:hidden;cursor:pointer;transition:all .25s}
 .rec-card:hover{box-shadow:var(--sh);transform:translateY(-3px)}
 .rec-img{height:150px;overflow:hidden;position:relative}
+.rec-img-sm{height:115px}
 .rec-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s;display:block}
 .rec-card:hover .rec-img img{transform:scale(1.07)}
 .rec-badge{position:absolute;top:8px;left:8px;background:var(--primary);color:#fff;font-size:.58rem;font-weight:700;letter-spacing:.07em;padding:3px 8px;border-radius:20px}
@@ -388,6 +431,9 @@ footer{background:#0f1a18;color:rgba(255,255,255,.5);padding:50px 20px 24px;marg
 /* CHAT FAB */
 .chat-fab{position:fixed;bottom:20px;right:16px;z-index:250;width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;border:none;display:flex;align-items:center;justify-content:center;font-size:1.1rem;box-shadow:0 4px 16px rgba(72,92,72,.4);cursor:pointer;transition:transform .2s}
 .chat-fab:hover{transform:scale(1.08)}
+.back-top{position:fixed;bottom:74px;right:16px;z-index:250;width:44px;height:44px;border-radius:50%;background:#fff;color:var(--primary);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.82rem;font-weight:800;box-shadow:var(--sh);cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:all .2s}
+.back-top.show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.back-top:hover{background:var(--primary);color:#fff}
 
 /* TOAST */
 .toast{position:fixed;bottom:72px;left:50%;transform:translateX(-50%) translateY(8px);background:var(--ink);color:#fff;padding:10px 20px;border-radius:50px;font-size:.79rem;font-weight:500;opacity:0;transition:all .25s;z-index:600;white-space:nowrap;pointer-events:none}
@@ -451,7 +497,7 @@ footer{background:#0f1a18;color:rgba(255,255,255,.5);padding:50px 20px 24px;marg
       </svg>
     </div>
     <form class="topic-search" role="search" onsubmit="return submitTopicSearch(event)">
-      <input id="topic-search-input" type="search" placeholder="Search topics..." autocomplete="off" aria-label="Search topics" oninput="updateTopicResults()" onfocus="updateTopicResults()" onkeydown="handleTopicKey(event)">
+      <input id="topic-search-input" type="search" placeholder="Search topics..." data-i18n-placeholder="search_placeholder" autocomplete="off" aria-label="Search topics" oninput="updateTopicResults()" onfocus="updateTopicResults()" onkeydown="handleTopicKey(event)">
       <button type="submit" aria-label="Search">⌕</button>
       <div id="topic-results" class="topic-results" role="listbox"></div>
     </form>
@@ -669,7 +715,7 @@ footer{background:#0f1a18;color:rgba(255,255,255,.5);padding:50px 20px 24px;marg
     <div class="art-list">
       <div class="art-card reveal" onclick="go('article1')"><div class="art-img"><img src="images/article-mindfulness.jpg" alt="Anxiety"></div><div class="art-body"><div class="art-cat" data-i18n="cat_stress">Stress & Anxiety</div><h3 data-i18n="a1_title">Natural Remedies for Anxiety: 7 Holistic Approaches That Actually Help</h3><p data-i18n="a1_desc">From adaptogenic herbs to breathwork and magnesium glycinate — a comprehensive guide to calming your nervous system naturally.</p><div class="art-meta"><span data-i18n="read8">8 min read</span></div></div></div>
       <div class="art-card reveal" onclick="go('article2')"><div class="art-img"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=900&q=80&auto=format&fit=crop" alt="Gut Health"></div><div class="art-body"><div class="art-cat" data-i18n="cat_gut">Gut Health</div><h3 data-i18n="a2_title">How to Improve Gut Health Naturally (Foods + Herbs That Work)</h3><p data-i18n="a2_desc">The gut-brain connection is real. Learn which fermented foods, herbs, and protocols heal your microbiome from the inside out.</p><div class="art-meta"><span data-i18n="read10">10 min read</span></div></div></div>
-      <div class="art-card reveal" onclick="go('article4')"><div class="art-img"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&q=85&auto=format&fit=crop" alt="Morning Routine"></div><div class="art-body"><div class="art-cat" data-i18n="cat_daily">Daily Practice</div><h3 data-i18n="a4_title">Morning Routine for Holistic Energy and Mental Clarity</h3><p data-i18n="a4_desc">A practical morning framework combining light exposure, movement, nutrition, and mindfulness for all-day energy.</p><div class="art-meta"><span data-i18n="read6">6 min read</span></div></div></div>
+      <div class="art-card reveal" onclick="go('article4')"><div class="art-img"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&q=85&auto=format&fit=crop" alt="Morning movement and mindfulness routine"></div><div class="art-body"><div class="art-cat" data-i18n="cat_daily">Daily Practice</div><h3 data-i18n="a4_title">Morning Routine for Holistic Energy and Mental Clarity</h3><p data-i18n="a4_desc">A practical morning framework combining light exposure, movement, nutrition, and mindfulness for all-day energy.</p><div class="art-meta"><span data-i18n="read6">6 min read</span></div></div></div>
     </div>
     <div style="margin-top:16px;text-align:center"><button class="btn btn-outline btn-sm" onclick="go('articles')" data-i18n="see_all_articles">Read all articles →</button></div>
   </section>
@@ -860,9 +906,9 @@ footer{background:#0f1a18;color:rgba(255,255,255,.5);padding:50px 20px 24px;marg
       <div class="art-card reveal" onclick="go('article1')"><div class="art-img"><img src="images/article-mindfulness.jpg" alt="Anxiety"></div><div class="art-body"><div class="art-cat" data-i18n="cat_stress">Stress & Anxiety</div><h3 data-i18n="a1_title">Natural Remedies for Anxiety: 7 Holistic Approaches That Actually Help</h3><p data-i18n="a1_desc">From adaptogenic herbs to breathwork and magnesium glycinate — a comprehensive guide to calming your nervous system naturally.</p><div class="art-meta"><span data-i18n="read8">8 min read</span></div></div></div>
       <div class="art-card reveal" onclick="go('article2')"><div class="art-img"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=900&q=80&auto=format&fit=crop" alt="Gut Health"></div><div class="art-body"><div class="art-cat" data-i18n="cat_gut">Gut Health</div><h3 data-i18n="a2_title">How to Improve Gut Health Naturally (Foods + Herbs That Work)</h3><p data-i18n="a2_desc">The gut-brain connection is real. Learn which fermented foods, herbs, and protocols heal your microbiome from the inside out.</p><div class="art-meta"><span data-i18n="read10">10 min read</span></div></div></div>
       <div class="art-card reveal" onclick="go('article3')"><div class="art-img"><img src="images/article-magnesium.jpg" alt="Supplements"></div><div class="art-body"><div class="art-cat" data-i18n="cat_supps">Supplements</div><h3 data-i18n="a3_title">Best Supplements for Stress Relief and Nervous System Support</h3><p data-i18n="a3_desc">Ashwagandha vs Rhodiola vs L-Theanine — a side-by-side comparison with dosage guides and trusted product links.</p><div class="art-meta"><span data-i18n="read7">7 min read</span></div></div></div>
-      <div class="art-card reveal" onclick="go('article4')"><div class="art-img"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&q=85&auto=format&fit=crop" alt="Morning Routine"></div><div class="art-body"><div class="art-cat" data-i18n="cat_daily">Daily Practice</div><h3 data-i18n="a4_title">Morning Routine for Holistic Energy and Mental Clarity</h3><p data-i18n="a4_desc">A practical morning framework combining light exposure, movement, nutrition, and mindfulness for all-day energy.</p><div class="art-meta"><span data-i18n="read6">6 min read</span></div></div></div>
+      <div class="art-card reveal" onclick="go('article4')"><div class="art-img"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&q=85&auto=format&fit=crop" alt="Morning movement and mindfulness routine"></div><div class="art-body"><div class="art-cat" data-i18n="cat_daily">Daily Practice</div><h3 data-i18n="a4_title">Morning Routine for Holistic Energy and Mental Clarity</h3><p data-i18n="a4_desc">A practical morning framework combining light exposure, movement, nutrition, and mindfulness for all-day energy.</p><div class="art-meta"><span data-i18n="read6">6 min read</span></div></div></div>
       <div class="art-card reveal" onclick="go('article5')"><div class="art-img"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&q=80&auto=format&fit=crop" alt="Anti-Inflammatory"></div><div class="art-body"><div class="art-cat" data-i18n="cat_nutrition">Nutrition</div><h3 data-i18n="a5_title">Top Anti-Inflammatory Foods and How to Use Them Daily</h3><p data-i18n="a5_desc">Chronic inflammation drives most modern disease. These 12 foods — including turmeric, ginger, and omega-rich seeds — can shift your biology in weeks.</p><div class="art-meta"><span data-i18n="read9">9 min read</span></div></div></div>
-      <div class="art-card reveal" onclick="go('article6')"><div class="art-img"><img src="images/hero-option-a.jpg" alt="Sleep"></div><div class="art-body"><div class="art-cat" data-i18n="cat_sleep">Sleep & Recovery</div><h3 data-i18n="a6_title">Natural Sleep Remedies That Actually Work (No Melatonin Needed)</h3><p data-i18n="a6_desc">Magnesium glycinate, valerian root, sleep hygiene, and circadian rhythm hacks — a complete evidence-based sleep protocol.</p><div class="art-meta"><span data-i18n="read8">8 min read</span></div></div></div>
+      <div class="art-card reveal" onclick="go('article6')"><div class="art-img"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&q=85&auto=format&fit=crop" alt="Calm bedroom for natural sleep support"></div><div class="art-body"><div class="art-cat" data-i18n="cat_sleep">Sleep & Recovery</div><h3 data-i18n="a6_title">Natural Sleep Remedies That Actually Work (No Melatonin Needed)</h3><p data-i18n="a6_desc">Magnesium glycinate, valerian root, sleep hygiene, and circadian rhythm hacks — a complete evidence-based sleep protocol.</p><div class="art-meta"><span data-i18n="read8">8 min read</span></div></div></div>
     </div>
   </section>
 </div>
@@ -875,7 +921,7 @@ footer{background:#0f1a18;color:rgba(255,255,255,.5);padding:50px 20px 24px;marg
     <p class="reveal" style="color:var(--muted);font-size:.9rem;margin-top:10px" data-i18n="recipes_desc">Nourishing, anti-inflammatory recipes designed to heal your gut, boost energy, and support hormonal balance.</p>
     <div class="rec-grid">
       <div class="rec-card reveal" onclick="go('recipe1')"><div class="rec-img"><img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=800&q=85&auto=format&fit=crop" alt="Turmeric Latte"><span class="rec-badge" data-i18n="badge_anti">Anti-Inflammatory</span></div><div class="rec-info"><h3 data-i18n="r1_name">Golden Turmeric Latte</h3><p data-i18n="r1_desc">Turmeric, ginger, black pepper, and coconut milk to reduce inflammation and support joint health.</p><div class="rec-meta"><span>⏱ 5 min</span><span>🌿 <span data-i18n="vegan">Vegan</span></span><span>⭐ 4.9</span></div></div></div>
-      <div class="rec-card reveal" onclick="go('recipe2')"><div class="rec-img"><img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=400&q=80&auto=format&fit=crop" alt="Gut Smoothie"><span class="rec-badge" data-i18n="badge_gut">Gut Health</span></div><div class="rec-info"><h3 data-i18n="r2_name">Gut-Healing Green Smoothie</h3><p data-i18n="r2_desc">Kefir, spinach, banana, ginger, and collagen peptides for a microbiome-boosting breakfast.</p><div class="rec-meta"><span>⏱ 3 min</span><span>🥛 Probiotic</span><span>⭐ 4.8</span></div></div></div>
+      <div class="rec-card reveal" onclick="go('recipe2')"><div class="rec-img rec-img-sm"><img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=400&q=80&auto=format&fit=crop" alt="Gut Smoothie"><span class="rec-badge" data-i18n="badge_gut">Gut Health</span></div><div class="rec-info"><h3 data-i18n="r2_name">Gut-Healing Green Smoothie</h3><p data-i18n="r2_desc">Kefir, spinach, banana, ginger, and collagen peptides for a microbiome-boosting breakfast.</p><div class="rec-meta"><span>⏱ 3 min</span><span>🥛 Probiotic</span><span>⭐ 4.8</span></div></div></div>
       <div class="rec-card reveal" onclick="go('recipe3')"><div class="rec-img"><img src="https://cdn.pixabay.com/photo/2020/12/09/15/42/broth-5817758_1280.jpg" alt="Bone Broth"><span class="rec-badge" data-i18n="badge_heal">Healing</span></div><div class="rec-info"><h3 data-i18n="r3_name">Slow-Cooked Bone Broth</h3><p data-i18n="r3_desc">Rich in collagen, glycine, and minerals — a gut-lining repair protocol in a bowl.</p><div class="rec-meta"><span>⏱ 4 hrs</span><span>🦴 Collagen</span><span>⭐ 4.9</span></div></div></div>
       <div class="rec-card reveal" onclick="go('recipe4')"><div class="rec-img"><img src="images/recipe-moon-milk.jpg" alt="Moon Milk"><span class="rec-badge" data-i18n="badge_energy">Energy</span></div><div class="rec-info"><h3 data-i18n="r4_name">Adaptogen Moon Milk</h3><p data-i18n="r4_desc">Maca, ashwagandha, cacao, and warm oat milk — stress-busting and deeply nourishing.</p><div class="rec-meta"><span>⏱ 7 min</span><span>🌱 Adaptogenic</span><span>⭐ 4.7</span></div></div></div>
       <div class="rec-card reveal" onclick="go('recipe5')"><div class="rec-img"><img src="images/recipe-elderberry.jpg" alt="Elderberry Tea"><span class="rec-badge" data-i18n="badge_sleep">Sleep</span></div><div class="rec-info"><h3 data-i18n="r5_name">Elderberry Bedtime Tea</h3><p data-i18n="r5_desc">Elderberry, chamomile, passionflower, and lemon balm for restorative sleep and immune support.</p><div class="rec-meta"><span>⏱ 8 min</span><span>🌙 Nighttime</span><span>⭐ 4.9</span></div></div></div>
@@ -3210,7 +3256,7 @@ function handleFeedbackForm(e){
       <div class="divider"></div>
       <h2>Related Articles</h2>
       <div class="art-related">
-        <div class="art-card" onclick="go('article6')" style="cursor:pointer"><div class="art-img"><img src="images/hero-option-a.jpg" alt="Sleep"></div><div class="art-body"><div class="art-cat">Sleep & Recovery</div><h3>Natural Sleep Remedies That Actually Work</h3></div></div>
+        <div class="art-card" onclick="go('article6')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&q=85&auto=format&fit=crop" alt="Calm bedroom for natural sleep support"></div><div class="art-body"><div class="art-cat">Sleep & Recovery</div><h3>Natural Sleep Remedies That Actually Work</h3></div></div>
         <div class="art-card" onclick="go('article3')" style="cursor:pointer"><div class="art-img"><img src="images/article-magnesium.jpg" alt="Supplements"></div><div class="art-body"><div class="art-cat">Supplements</div><h3>Best Supplements for Stress Relief</h3></div></div>
       </div>
     </div>
@@ -3280,7 +3326,7 @@ function handleFeedbackForm(e){
       <h2>Related Articles</h2>
       <div class="art-related">
         <div class="art-card" onclick="go('article1')" style="cursor:pointer"><div class="art-img"><img src="images/article-mindfulness.jpg" alt="Anxiety"></div><div class="art-body"><div class="art-cat">Stress & Anxiety</div><h3>Natural Remedies for Anxiety: 7 Holistic Approaches</h3></div></div>
-        <div class="art-card" onclick="go('article6')" style="cursor:pointer"><div class="art-img"><img src="images/hero-option-a.jpg" alt="Sleep"></div><div class="art-body"><div class="art-cat">Sleep & Recovery</div><h3>Natural Sleep Remedies That Actually Work</h3></div></div>
+        <div class="art-card" onclick="go('article6')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&q=85&auto=format&fit=crop" alt="Calm bedroom for natural sleep support"></div><div class="art-body"><div class="art-cat">Sleep & Recovery</div><h3>Natural Sleep Remedies That Actually Work</h3></div></div>
       </div>
     </div>
   </div>
@@ -3288,7 +3334,7 @@ function handleFeedbackForm(e){
 
 <!-- ═══ ARTICLE 4: Morning Routine ═══ -->
 <div class="page" id="page-article4">
-  <img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&q=85&auto=format&fit=crop" alt="Morning Routine" class="art-page-hero">
+  <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1200&q=85&auto=format&fit=crop" alt="Morning movement and mindfulness routine" class="art-page-hero">
   <div class="art-page-wrap">
     <button class="art-back" onclick="go('articles')">← Back to Articles</button>
     <span class="art-page-cat">Daily Practice</span>
@@ -3313,7 +3359,7 @@ function handleFeedbackForm(e){
       <h2>Related Articles</h2>
       <div class="art-related">
         <div class="art-card" onclick="go('article1')" style="cursor:pointer"><div class="art-img"><img src="images/article-mindfulness.jpg" alt="Anxiety"></div><div class="art-body"><div class="art-cat">Stress & Anxiety</div><h3>Natural Remedies for Anxiety: 7 Holistic Approaches</h3></div></div>
-        <div class="art-card" onclick="go('article6')" style="cursor:pointer"><div class="art-img"><img src="images/hero-option-a.jpg" alt="Sleep"></div><div class="art-body"><div class="art-cat">Sleep & Recovery</div><h3>Natural Sleep Remedies That Actually Work</h3></div></div>
+        <div class="art-card" onclick="go('article6')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&q=85&auto=format&fit=crop" alt="Calm bedroom for natural sleep support"></div><div class="art-body"><div class="art-cat">Sleep & Recovery</div><h3>Natural Sleep Remedies That Actually Work</h3></div></div>
       </div>
     </div>
   </div>
@@ -3358,7 +3404,7 @@ function handleFeedbackForm(e){
 
 <!-- ═══ ARTICLE 6: Sleep ═══ -->
 <div class="page" id="page-article6">
-  <img src="images/hero-option-a.jpg" alt="Sleep Remedies" class="art-page-hero">
+  <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&q=85&auto=format&fit=crop" alt="Calm bedroom for natural sleep support" class="art-page-hero">
   <div class="art-page-wrap">
     <button class="art-back" onclick="go('articles')">← Back to Articles</button>
     <span class="art-page-cat">Sleep & Recovery</span>
@@ -3385,7 +3431,7 @@ function handleFeedbackForm(e){
       <div class="divider"></div>
       <h2>Related Articles</h2>
       <div class="art-related">
-        <div class="art-card" onclick="go('article4')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&q=85&auto=format&fit=crop" alt="Morning Routine"></div><div class="art-body"><div class="art-cat">Daily Practice</div><h3>Morning Routine for Holistic Energy and Mental Clarity</h3></div></div>
+        <div class="art-card" onclick="go('article4')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&q=85&auto=format&fit=crop" alt="Morning movement and mindfulness routine"></div><div class="art-body"><div class="art-cat">Daily Practice</div><h3>Morning Routine for Holistic Energy and Mental Clarity</h3></div></div>
         <div class="art-card" onclick="go('article1')" style="cursor:pointer"><div class="art-img"><img src="images/article-mindfulness.jpg" alt="Anxiety"></div><div class="art-body"><div class="art-cat">Stress & Anxiety</div><h3>Natural Remedies for Anxiety: 7 Holistic Approaches</h3></div></div>
       </div>
     </div>
@@ -4170,10 +4216,10 @@ function autoGrow(el) {
 
     <h2 style="color:var(--primary)">Articles for Little Ones</h2>
     <div class="art-list" style="margin-top:16px">
-      <div class="art-card reveal" onclick="go('article13')"><div class="art-img"><img src="images/article-autism-natural-healing.jpg" alt="Kids Immune"></div><div class="art-body"><div class="art-cat">Little Ones</div><h3>Natural Immune Support for Children: Safe, Gentle, Evidence-Based</h3><p>Vitamin D3, elderberry syrup, probiotics, and zinc — targeted nutritional support to reduce childhood illness frequency.</p><div class="art-meta">9 min read</div></div></div>
+      <div class="art-card reveal" onclick="go('article13')"><div class="art-img"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=900&q=85&auto=format&fit=crop" alt="Child outdoors for immune support"></div><div class="art-body"><div class="art-cat">Little Ones</div><h3>Natural Immune Support for Children: Safe, Gentle, Evidence-Based</h3><p>Vitamin D3, elderberry syrup, probiotics, and zinc — targeted nutritional support to reduce childhood illness frequency.</p><div class="art-meta">9 min read</div></div></div>
       <div class="art-card reveal" onclick="go('article14')"><div class="art-img"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=900&q=80&auto=format&fit=crop" alt="Kids Probiotics"></div><div class="art-body"><div class="art-cat">Little Ones</div><h3>Probiotics for Children: A Complete Parent's Guide</h3><p>The right strains, doses, and timing for children from infants to teens — and when probiotics matter most.</p><div class="art-meta">8 min read</div></div></div>
-      <div class="art-card reveal" onclick="go('article15')"><div class="art-img"><img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=800&q=85&auto=format&fit=crop" alt="Kids Sleep"></div><div class="art-body"><div class="art-cat">Little Ones</div><h3>Natural Sleep Support for Children: Gentle Approaches That Work</h3><p>Magnesium, chamomile tea, screen-free routines, and room environment — what actually helps children sleep.</p><div class="art-meta">7 min read</div></div></div>
-      <div class="art-card reveal" onclick="go('autism')"><div class="art-img"><img src="images/article-autism-natural-healing.jpg" alt="Autism"></div><div class="art-body"><div class="art-cat">Autism Support</div><h3>Folinic Acid & Autism: What the Research Shows</h3><p>Evidence-based guide on FRAA, folinic acid protocols, and natural biomedical approaches for children with ASD.</p><div class="art-meta">Research Review</div></div></div>
+      <div class="art-card reveal" onclick="go('article15')"><div class="art-img"><img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=900&q=85&auto=format&fit=crop" alt="Child sleeping peacefully"></div><div class="art-body"><div class="art-cat">Little Ones</div><h3>Natural Sleep Support for Children: Gentle Approaches That Work</h3><p>Magnesium, chamomile tea, screen-free routines, and room environment — what actually helps children sleep.</p><div class="art-meta">7 min read</div></div></div>
+      <div class="art-card reveal" onclick="go('autism')"><div class="art-img"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=900&q=85&auto=format&fit=crop" alt="Child learning and developmental support"></div><div class="art-body"><div class="art-cat">Autism Support</div><h3>Folinic Acid & Autism: What the Research Shows</h3><p>Evidence-based guide on FRAA, folinic acid protocols, and natural biomedical approaches for children with ASD.</p><div class="art-meta">Research Review</div></div></div>
     </div>
     <div style="margin-top:28px;background:linear-gradient(135deg,#0f1f3d,#1a4a8a);border-radius:var(--r-lg);padding:28px 20px;color:#fff;text-align:center">
       <h3 style="color:#fff;margin-bottom:10px">💙 Autism Hub</h3>
@@ -4208,8 +4254,8 @@ function autoGrow(el) {
     <h2 style="color:var(--primary)">Natural Pet Wellness Guides</h2>
     <div class="art-list" style="margin-top:16px">
       <div class="art-card reveal" onclick="go('article16')"><div class="art-img"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80&auto=format&fit=crop" alt="Pet Probiotics"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Probiotics for Pets: What the Research Actually Shows</h3><p>The best strains for dogs and cats, when to use them, and how to introduce probiotic-rich foods safely.</p><div class="art-meta">8 min read</div></div></div>
-      <div class="art-card reveal" onclick="go('article17')"><div class="art-img"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80&auto=format&fit=crop" alt="Pet Anxiety"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Natural Anxiety Relief for Dogs & Cats: Evidence-Based Options</h3><p>L-theanine, lavender aromatherapy, valerian root, and pressure wraps — what actually works for anxious pets.</p><div class="art-meta">7 min read</div></div></div>
-      <div class="art-card reveal" onclick="go('article18')"><div class="art-img"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&q=80&auto=format&fit=crop" alt="Pet Joints"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Joint & Mobility Support for Aging Pets: Natural Approaches That Work</h3><p>Fish oil, turmeric, green-lipped mussel, and glucosamine — the veterinary evidence and practical protocols.</p><div class="art-meta">8 min read</div></div></div>
+      <div class="art-card reveal" onclick="go('article17')"><div class="art-img"><img src="https://images.pexels.com/photos/16395150/pexels-photo-16395150.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Dog and cat together"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Natural Anxiety Relief for Dogs & Cats: Evidence-Based Options</h3><p>L-theanine, lavender aromatherapy, valerian root, and pressure wraps — what actually works for anxious pets.</p><div class="art-meta">7 min read</div></div></div>
+      <div class="art-card reveal" onclick="go('article18')"><div class="art-img"><img src="https://images.pexels.com/photos/11012548/pexels-photo-11012548.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Senior dog walking for mobility support"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Joint & Mobility Support for Aging Pets: Natural Approaches That Work</h3><p>Fish oil, turmeric, green-lipped mussel, and glucosamine — the veterinary evidence and practical protocols.</p><div class="art-meta">8 min read</div></div></div>
     </div>
 
     <div style="margin-top:28px;background:var(--bg-sec);border-radius:var(--r-lg);border:1px solid var(--border);padding:26px 20px;text-align:center">
@@ -4249,9 +4295,9 @@ function autoGrow(el) {
       <div class="art-card reveal" onclick="go('article1')"><div class="art-img"><img src="images/article-mindfulness.jpg" alt="Anxiety"></div><div class="art-body"><div class="art-cat">Stress & Anxiety</div><h3>Natural Remedies for Anxiety: 7 Holistic Approaches That Actually Help</h3><p>Ashwagandha, magnesium, L-theanine, breathwork, and more — a complete evidence-based anxiety protocol.</p><div class="art-meta">8 min read</div></div></div>
       <div class="art-card reveal" onclick="go('article2')"><div class="art-img"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=900&q=80&auto=format&fit=crop" alt="Gut"></div><div class="art-body"><div class="art-cat">Gut Health</div><h3>How to Improve Gut Health Naturally (Foods + Herbs That Work)</h3><p>Fermented foods, prebiotic fibre, bone broth, and herbs that heal your microbiome from the inside out.</p><div class="art-meta">10 min read</div></div></div>
       <div class="art-card reveal" onclick="go('article3')"><div class="art-img"><img src="images/article-magnesium.jpg" alt="Supplements"></div><div class="art-body"><div class="art-cat">Supplements</div><h3>Best Supplements for Stress Relief and Nervous System Support</h3><p>The only supplements with real evidence — dosages, forms, and what to avoid.</p><div class="art-meta">7 min read</div></div></div>
-      <div class="art-card reveal" onclick="go('article4')"><div class="art-img"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1200&q=85&auto=format&fit=crop" alt="Morning Routine"></div><div class="art-body"><div class="art-cat">Daily Practice</div><h3>Morning Routine for Holistic Energy and Mental Clarity</h3><p>Light, movement, nutrition, and mindfulness — a complete holistic morning protocol.</p><div class="art-meta">6 min read</div></div></div>
+      <div class="art-card reveal" onclick="go('article4')"><div class="art-img"><img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=900&q=85&auto=format&fit=crop" alt="Morning movement and mindfulness routine"></div><div class="art-body"><div class="art-cat">Daily Practice</div><h3>Morning Routine for Holistic Energy and Mental Clarity</h3><p>Light, movement, nutrition, and mindfulness — a complete holistic morning protocol.</p><div class="art-meta">6 min read</div></div></div>
       <div class="art-card reveal" onclick="go('article5')"><div class="art-img"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&q=80&auto=format&fit=crop" alt="Anti-Inflammatory"></div><div class="art-body"><div class="art-cat">Nutrition</div><h3>Top Anti-Inflammatory Foods and How to Use Them Daily</h3><p>Turmeric, ginger, omega-3s, and 9 more foods that fight chronic inflammation at the root.</p><div class="art-meta">9 min read</div></div></div>
-      <div class="art-card reveal" onclick="go('article6')"><div class="art-img"><img src="images/hero-option-a.jpg" alt="Sleep"></div><div class="art-body"><div class="art-cat">Sleep & Recovery</div><h3>Natural Sleep Remedies That Actually Work (No Melatonin Needed)</h3><p>Magnesium, valerian, passionflower, and sleep hygiene that actually produces deep, restorative sleep.</p><div class="art-meta">8 min read</div></div></div>
+      <div class="art-card reveal" onclick="go('article6')"><div class="art-img"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&q=85&auto=format&fit=crop" alt="Calm bedroom for natural sleep support"></div><div class="art-body"><div class="art-cat">Sleep & Recovery</div><h3>Natural Sleep Remedies That Actually Work (No Melatonin Needed)</h3><p>Magnesium, valerian, passionflower, and sleep hygiene that actually produces deep, restorative sleep.</p><div class="art-meta">8 min read</div></div></div>
     </div>
   </section>
 </div>
@@ -4427,7 +4473,7 @@ function submitPetsNewsletter() {
 
 <!-- ═══ KIDS ARTICLE 1 ═══ -->
 <div class="page" id="page-article13">
-  <img src="images/article-autism-natural-healing.jpg" alt="Child wellness in nature" class="art-page-hero">
+  <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1200&q=85&auto=format&fit=crop" alt="Child wellness in nature" class="art-page-hero">
   <div class="art-page-wrap">
     <button class="art-back" onclick="go('kids')">← Back to Little Ones</button>
     <span class="art-page-cat">Little Ones · Immune Support</span>
@@ -4444,7 +4490,7 @@ function submitPetsNewsletter() {
       <div class="divider"></div>
       <h2>Related Articles</h2>
       <div class="art-related">
-        <div class="art-card" onclick="go('autism')" style="cursor:pointer"><div class="art-img"><img src="images/article-autism-natural-healing.jpg" alt="Autism"></div><div class="art-body"><div class="art-cat">Little Ones</div><h3>Folinic Acid & Autism: What the Research Shows</h3></div></div>
+        <div class="art-card" onclick="go('autism')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=900&q=85&auto=format&fit=crop" alt="Autism support"></div><div class="art-body"><div class="art-cat">Little Ones</div><h3>Folinic Acid & Autism: What the Research Shows</h3></div></div>
         <div class="art-card" onclick="go('article14')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=900&q=80&auto=format&fit=crop" alt="Probiotics Kids"></div><div class="art-body"><div class="art-cat">Little Ones</div><h3>Probiotics for Children: A Parent's Guide</h3></div></div>
       </div>
     </div>
@@ -4470,7 +4516,7 @@ function submitPetsNewsletter() {
       <div class="divider"></div>
       <h2>Related Articles</h2>
       <div class="art-related">
-        <div class="art-card" onclick="go('article13')" style="cursor:pointer"><div class="art-img"><img src="images/article-autism-natural-healing.jpg" alt="Immune Kids"></div><div class="art-body"><div class="art-cat">Little Ones</div><h3>Natural Immune Support for Children</h3></div></div>
+        <div class="art-card" onclick="go('article13')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=900&q=85&auto=format&fit=crop" alt="Immune support for kids"></div><div class="art-body"><div class="art-cat">Little Ones</div><h3>Natural Immune Support for Children</h3></div></div>
         <div class="art-card" onclick="go('article2')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=900&q=80&auto=format&fit=crop" alt="Gut Health"></div><div class="art-body"><div class="art-cat">Gut Health</div><h3>How to Improve Gut Health Naturally</h3></div></div>
       </div>
     </div>
@@ -4496,8 +4542,8 @@ function submitPetsNewsletter() {
       <div class="divider"></div>
       <h2>Related Articles</h2>
       <div class="art-related">
-        <div class="art-card" onclick="go('article13')" style="cursor:pointer"><div class="art-img"><img src="images/article-autism-natural-healing.jpg" alt="Immune Kids"></div><div class="art-body"><div class="art-cat">Little Ones</div><h3>Natural Immune Support for Children</h3></div></div>
-        <div class="art-card" onclick="go('article6')" style="cursor:pointer"><div class="art-img"><img src="images/hero-option-a.jpg" alt="Sleep"></div><div class="art-body"><div class="art-cat">Sleep & Recovery</div><h3>Natural Sleep Remedies That Actually Work</h3></div></div>
+        <div class="art-card" onclick="go('article13')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=900&q=85&auto=format&fit=crop" alt="Immune support for kids"></div><div class="art-body"><div class="art-cat">Little Ones</div><h3>Natural Immune Support for Children</h3></div></div>
+        <div class="art-card" onclick="go('article6')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&q=85&auto=format&fit=crop" alt="Calm bedroom for natural sleep support"></div><div class="art-body"><div class="art-cat">Sleep & Recovery</div><h3>Natural Sleep Remedies That Actually Work</h3></div></div>
       </div>
     </div>
   </div>
@@ -4522,8 +4568,8 @@ function submitPetsNewsletter() {
       <div class="divider"></div>
       <h2>Related Articles</h2>
       <div class="art-related">
-        <div class="art-card" onclick="go('article17')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80&auto=format&fit=crop" alt="Pet Anxiety"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Natural Anxiety Relief for Dogs & Cats</h3></div></div>
-        <div class="art-card" onclick="go('article18')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&q=80&auto=format&fit=crop" alt="Pet Joints"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Joint Support for Aging Pets</h3></div></div>
+        <div class="art-card" onclick="go('article17')" style="cursor:pointer"><div class="art-img"><img src="https://images.pexels.com/photos/16395150/pexels-photo-16395150.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Dog and cat together"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Natural Anxiety Relief for Dogs & Cats</h3></div></div>
+        <div class="art-card" onclick="go('article18')" style="cursor:pointer"><div class="art-img"><img src="https://images.pexels.com/photos/11012548/pexels-photo-11012548.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Senior dog walking for mobility support"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Joint Support for Aging Pets</h3></div></div>
       </div>
     </div>
   </div>
@@ -4531,7 +4577,7 @@ function submitPetsNewsletter() {
 
 <!-- ═══ PETS ARTICLE 2 ═══ -->
 <div class="page" id="page-article17">
-  <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=85&auto=format&fit=crop" alt="Pet Anxiety" class="art-page-hero">
+  <img src="https://images.pexels.com/photos/16395150/pexels-photo-16395150.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Dog and cat together" class="art-page-hero">
   <div class="art-page-wrap">
     <button class="art-back" onclick="go('pets')">← Back to Pets Health</button>
     <span class="art-page-cat">Pets Health · Anxiety & Stress</span>
@@ -4549,7 +4595,7 @@ function submitPetsNewsletter() {
       <h2>Related Articles</h2>
       <div class="art-related">
         <div class="art-card" onclick="go('article16')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80&auto=format&fit=crop" alt="Pet Probiotics"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Probiotics for Pets: What the Research Shows</h3></div></div>
-        <div class="art-card" onclick="go('article18')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&q=80&auto=format&fit=crop" alt="Pet Joints"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Joint Support for Aging Pets</h3></div></div>
+        <div class="art-card" onclick="go('article18')" style="cursor:pointer"><div class="art-img"><img src="https://images.pexels.com/photos/11012548/pexels-photo-11012548.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Senior dog walking for mobility support"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Joint Support for Aging Pets</h3></div></div>
       </div>
     </div>
   </div>
@@ -4557,7 +4603,7 @@ function submitPetsNewsletter() {
 
 <!-- ═══ PETS ARTICLE 3 ═══ -->
 <div class="page" id="page-article18">
-  <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=1200&q=85&auto=format&fit=crop" alt="Pet Joints" class="art-page-hero">
+  <img src="https://images.pexels.com/photos/11012548/pexels-photo-11012548.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Senior dog walking for mobility support" class="art-page-hero">
   <div class="art-page-wrap">
     <button class="art-back" onclick="go('pets')">← Back to Pets Health</button>
     <span class="art-page-cat">Pets Health · Joint Health</span>
@@ -4575,7 +4621,7 @@ function submitPetsNewsletter() {
       <h2>Related Articles</h2>
       <div class="art-related">
         <div class="art-card" onclick="go('article16')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80&auto=format&fit=crop" alt="Pet Probiotics"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Probiotics for Pets: What the Research Shows</h3></div></div>
-        <div class="art-card" onclick="go('article17')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80&auto=format&fit=crop" alt="Pet Anxiety"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Natural Anxiety Relief for Dogs & Cats</h3></div></div>
+        <div class="art-card" onclick="go('article17')" style="cursor:pointer"><div class="art-img"><img src="https://images.pexels.com/photos/16395150/pexels-photo-16395150.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Dog and cat together"></div><div class="art-body"><div class="art-cat">Pets Health</div><h3>Natural Anxiety Relief for Dogs & Cats</h3></div></div>
       </div>
     </div>
   </div>
@@ -4698,7 +4744,7 @@ function submitPetsNewsletter() {
       <div class="art-related">
         <div class="art-card" onclick="go('article5')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&q=80&auto=format&fit=crop" alt="Anti-Inflammatory"></div><div class="art-body"><div class="art-cat">Nutrition</div><h3>Top Anti-Inflammatory Foods and How to Use Them Daily</h3></div></div>
         <div class="art-card" onclick="go('article2')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=900&q=80&auto=format&fit=crop" alt="Gut Health"></div><div class="art-body"><div class="art-cat">Gut Health</div><h3>How to Improve Gut Health Naturally</h3></div></div>
-        <div class="art-card" onclick="go('article6')" style="cursor:pointer"><div class="art-img"><img src="images/hero-option-a.jpg" alt="Sleep"></div><div class="art-body"><div class="art-cat">Sleep & Recovery</div><h3>Natural Sleep Remedies That Actually Work</h3></div></div>
+        <div class="art-card" onclick="go('article6')" style="cursor:pointer"><div class="art-img"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=900&q=85&auto=format&fit=crop" alt="Calm bedroom for natural sleep support"></div><div class="art-body"><div class="art-cat">Sleep & Recovery</div><h3>Natural Sleep Remedies That Actually Work</h3></div></div>
       </div>
     </div>
   </div>
@@ -4757,6 +4803,7 @@ function submitLongevityNewsletter(){
 </footer>
 
 <button class="chat-fab" onclick="go('contact')" title="Contact us">💬</button>
+<button class="back-top" id="back-top" onclick="scrollToTop()" title="Back to top">↑</button>
 <div class="toast" id="toast"></div>
 
 <script>
@@ -4769,6 +4816,7 @@ const LANG = {
     nav_wellness:'Wellness Hub', nav_about:'About', nav_articles:'Articles',
     nav_recipes:'Recipes', nav_market:'Market', nav_practitioners:'Practitioners',
     nav_media:'Podcast & Video', nav_contact:'Contact', nav_signin:'Sign In', nav_book:'Book Session',
+    search_placeholder:'Search topics...',
     // TABS
     tab_start:'Start Here', tab_wellness:'Wellness Hub', tab_articles:'Articles', tab_recipes:'Recipes',
     tab_market:'Market', tab_mindbody:'Mind & Body', tab_podcast:'Podcast', tab_practitioners:'Practitioners',
@@ -5005,72 +5053,73 @@ const LANG = {
     affiliate_soon:'Affiliate link coming soon — send us your link!',
   },
   es: {
-    nav_wellness:'Centro de Bienestar', nav_about:'Nosotros', nav_articles:'Artículos',
+    nav_wellness:'Centro para el bienestar', nav_about:'Nosotros', nav_articles:'Artículos',
     nav_recipes:'Recetas', nav_market:'Mercado', nav_practitioners:'Profesionales',
     nav_media:'Podcast y video', nav_contact:'Contacto', nav_signin:'Iniciar sesión', nav_book:'Reservar sesión',
-    tab_start:'Empieza aquí', tab_wellness:'Centro de bienestar', tab_articles:'Artículos', tab_recipes:'Recetas',
+    search_placeholder:'Buscar temas...',
+    tab_start:'Empieza aquí', tab_wellness:'Centro para el bienestar', tab_articles:'Artículos', tab_recipes:'Recetas',
     tab_market:'Mercado', tab_mindbody:'Mente y cuerpo', tab_podcast:'Podcast y video', tab_practitioners:'Profesionales',
     tab_autism:'Centro sobre autismo 💙', tab_longevity:'Longevidad ⚡', tab_about:'Nosotros', tab_contact:'Contacto',
-    cat_women:'♀ Salud de la mujer', cat_men:'♂ Salud del hombre', cat_little:'🍼 Niños y bebés',
+    cat_women:'♀ Salud femenina', cat_men:'♂ Salud masculina', cat_little:'🍼 Niños y bebés',
     cat_pets:'🐾 Salud de mascotas', cat_remedies:'🌿 Remedios naturales', cat_autism:'💙 Centro sobre autismo',
-    cat_sleep:'Sueño y recuperación', cat_immune:'Salud inmunitaria',
+    cat_sleep:'Recuperación del sueño', cat_immune:'Salud inmunitaria',
     cat_stress:'Estrés y ansiedad', cat_gut:'Salud intestinal', cat_supps:'Suplementos',
     cat_daily:'Práctica diaria', cat_nutrition:'Nutrición', cat_hormones:'Hormonas',
     concern_anxiety:'Ansiedad y estrés<small>Calma del sistema nervioso, adaptógenos y respiración.</small>',
     concern_gut:'Salud intestinal<small>Alimentos, hierbas, microbioma y digestión.</small>',
     concern_sleep:'Problemas de sueño<small>Descanso reparador sin depender de la melatonina.</small>',
-    concern_inflammation:'Inflamación<small>Alimentos antiinflamatorios y hábitos diarios de apoyo.</small>',
+    concern_inflammation:'Inflamación<small>Alimentos antiinflamatorios y hábitos diarios de cuidado.</small>',
     concern_supplements:'Suplementos<small>Formas, uso responsable y qué evitar según la evidencia.</small>',
     concern_routine:'Rutina diaria<small>Ritmo matutino, luz, movimiento y claridad mental.</small>',
-    long_cancer:'Prevención del cáncer<small>Hábitos saludables e información preventiva basada en evidencia científica.</small>',
+    long_cancer:'Prevención del cáncer<small>Hábitos saludables e información preventiva con respaldo científico.</small>',
     long_heart:'Prevención cardiovascular<small>Presión arterial, circulación, lípidos, movimiento y nutrición.</small><em class="topic-soon">Próximamente</em>',
     long_brain:'Salud cerebral y Alzheimer<small>Memoria, inflamación, sueño, glucosa y resiliencia cognitiva.</small><em class="topic-soon">Próximamente</em>',
     long_metabolic:'Salud metabólica y diabetes<small>Sensibilidad a la insulina, horarios de comida, músculo y energía.</small><em class="topic-soon">Próximamente</em>',
     long_antiaging:'Envejecimiento saludable<small>Salud celular, piel, movilidad, hormonas y hábitos de longevidad.</small><em class="topic-soon">Próximamente</em>',
     long_detox:'Desintoxicación y salud celular<small>Hígado, linfa, mitocondrias, autofagia y reducción de exposición.</small><em class="topic-soon">Próximamente</em>',
     cat_stress_short:'Ansiedad',
-    drawer_wellness:'Centro de Bienestar', drawer_explore:'Explorar', drawer_book:'Reservar una Consulta',
+    drawer_wellness:'Centro para el bienestar', drawer_explore:'Explorar', drawer_book:'Reservar una Consulta',
     hero_eyebrow:'Bienestar natural y salud integral',
     hero_title:'Soluciones Reales.<br>Calidad de Vida.',
     hero_desc:'Descubre recursos sobre bienestar natural con respaldo científico, herramientas para una vida holística y productos cuidadosamente seleccionados, todo en un mismo espacio.',
     hero_btn1:'Acerca de nosotros', hero_btn2:'Remedios naturales →',
     stats_eyebrow:'Una red global de bienestar',
     stats_title:'Donde la sabiduría ancestral se encuentra con la ciencia moderna',
-    stats_desc:'HolisticVox selecciona contenido, productos y recursos de bienestar para apoyar un camino de vida natural más informado.',
+    stats_desc:'HolisticVox selecciona contenido, productos y recursos de bienestar para apoyar un camino de bienestar natural basado en información.',
     stat1:'Profesionales', stat2:'Artículos', stat3:'Recetas de bienestar', stat4:'Productos seleccionados',
     how_eyebrow:'Simple y poderoso',
     how_title:'Explora tu camino hacia el bienestar natural',
-    how_desc:'Desde remedios herbolarios tradicionales hasta recursos respaldados por expertos, HolisticVox te acompaña en diversas áreas de la salud integral con claridad y contenido respaldado por evidencia científica.',
+    how_desc:'Desde remedios herbolarios tradicionales hasta recursos revisados con criterio profesional, HolisticVox te acompaña en diversas áreas de la salud integral con claridad y contenido basado en evidencia.',
     step1_title:'Aprende', step1_desc:'Explora nuestra biblioteca de artículos sobre remedios naturales, técnicas de respiración, nutrición y bienestar con minerales y metales preciosos.',
-    step2_title:'Encuentra apoyo', step2_desc:'Explora opciones de apoyo y caminos de bienestar mientras HolisticVox desarrolla su directorio de profesionales.',
+    step2_title:'Encuentra orientación', step2_desc:'Explora opciones de orientación y caminos de bienestar mientras HolisticVox desarrolla su directorio de profesionales.',
     step3_title:'Tienda HolisticVox', step3_desc:'Alimentos saludables para familias, suplementos de calidad y productos de bienestar seleccionados según los estándares de HolisticVox.',
     wellness_eyebrow:'Bienestar personalizado', wellness_title:'Bienestar para todos',
     wellness_desc:'Explora contenido adaptado a tus necesidades únicas — desde salud hormonal hasta cuidado de mascotas.',
     gold_eyebrow:'Nuestro enfoque diferencial',
     gold_title:'Bienestar con oro, plata y minerales',
-    gold_p1:'HolisticVox explora la intersección entre la vida holística, la educación mineral y las tradiciones de bienestar relacionadas con metales preciosos, desde una perspectiva cuidadosa y basada en evidencia.',
-    gold_p2:'Nuestra plataforma educativa reúne investigaciones sobre la historia, las perspectivas, las prácticas de bienestar y las tendencias emergentes relacionadas con los metales preciosos, el bienestar mineral, ofreciendo orientación clara y fundamentada para tomar decisiones con informacion previa.',
+    gold_p1:'HolisticVox explora la intersección entre la vida holística, la educación mineral y las tradiciones de bienestar relacionadas con metales preciosos, desde una perspectiva cuidadosa y con respaldo científico.',
+    gold_p2:'Nuestra plataforma educativa reúne investigaciones sobre la historia, las perspectivas, las prácticas de bienestar y las tendencias emergentes relacionadas con los metales preciosos y el bienestar mineral, ofreciendo orientación clara y fundamentada para tomar decisiones con información previa.',
     gold_btn:'Explorar bienestar con oro y plata →',
-    gold_i1_t:'Plata coloidal', gold_i1_d:'Uso tradicional y conversación actual sobre apoyo inmunitario y bienestar',
+    gold_i1_t:'Plata coloidal', gold_i1_d:'Uso tradicional y conversación actual sobre bienestar inmunitario',
     gold_i2_t:'Oro coloidal', gold_i2_d:'Tradiciones de bienestar relacionadas con claridad mental, estado de ánimo y confort articular',
-    gold_i3_t:'Protocolos de desintoxicación', gold_i3_d:'Educación sobre exposición, seguridad y apoyo natural al proceso de desintoxicación',
+    gold_i3_t:'Protocolos de desintoxicación', gold_i3_d:'Educación sobre exposición, seguridad y cuidado natural del proceso de desintoxicación',
     gold_i4_t:'Bienestar natural', gold_i4_d:'Alternativas naturales para comunidades conscientes de su salud',
     wisdom_eyebrow:'Artículos', wisdom_title:'Sabiduría reciente',
     see_all_articles:'Ver todos los artículos →',
-    articles_title:'Sabiduría natural<br>respaldada por evidencia científica',
-    articles_desc:'Guías detalladas sobre remedios naturales, estrategias de bienestar y salud integral, escritas con claridad y respaldadas por investigación.',
+    articles_title:'Sabiduría natural<br>con respaldo científico',
+    articles_desc:'Guías detalladas sobre remedios naturales, estrategias de bienestar y salud integral, escritas con claridad y fundamentadas en investigación.',
     a1_title:'Remedios naturales para la ansiedad: 7 enfoques holísticos que pueden ayudar',
     a1_desc:'Desde hierbas adaptogénicas hasta respiración y glicinato de magnesio — una guía completa para calmar tu sistema nervioso de forma natural.',
     a2_title:'Cómo apoyar la salud intestinal de forma natural (alimentos + hierbas útiles)',
     a2_desc:'La conexión intestino-cerebro es real. Aprende qué alimentos fermentados, hierbas y hábitos pueden apoyar tu microbioma desde dentro hacia fuera.',
-    a3_title:'Mejores Suplementos para el Alivio del Estrés y el Apoyo al Sistema Nervioso',
+    a3_title:'Mejores suplementos para el estrés y el equilibrio del sistema nervioso',
     a3_desc:'Ashwagandha, rhodiola y L-teanina — una comparación clara con notas de uso responsable y enlaces a productos de confianza.',
     a4_title:'Rutina Matutina para Energía Holística y Claridad Mental',
     a4_desc:'Un marco matutino práctico que combina exposición a la luz, movimiento, nutrición y atención plena para tener energía todo el día.',
     a5_title:'Principales Alimentos Antiinflamatorios y Cómo Usarlos a Diario',
     a5_desc:'La inflamación crónica se relaciona con muchos problemas de salud modernos. Estos 12 alimentos — incluida la cúrcuma, el jengibre y las semillas ricas en omega — pueden formar parte de una rutina antiinflamatoria.',
     a6_title:'Remedios naturales para dormir que pueden ayudar (sin melatonina)',
-    a6_desc:'Glicinato de magnesio, raíz de valeriana, hábitos de descanso y regulación natural del sueño: recursos y estrategias respaldados por evidencia científica para promover un descanso saludable.',
+    a6_desc:'Glicinato de magnesio, raíz de valeriana, hábitos de descanso y regulación natural del sueño: recursos y estrategias basados en evidencia para apoyar un descanso saludable.',
     read6:'6 min de lectura', read7:'7 min de lectura', read8:'8 min de lectura', read9:'9 min de lectura', read10:'10 min de lectura',
     market_eyebrow:'Mercado HolisticVox', market_title:'Selección para una vida más limpia',
     market_desc:'Alimentos saludables para familias, suplementos naturales y productos de bienestar — cada opción revisada por calidad de ingredientes, transparencia y valor real.',
@@ -5100,41 +5149,43 @@ const LANG = {
     start_desc:'Bienvenido a HolisticVox. Ya sea que estés dando tus primeros pasos hacia el bienestar o quieras profundizar más, este es el lugar ideal para empezar.',
     journey_eyebrow:'Tu proceso de bienestar', journey_title:'Sigue estos pasos:',
     path1_t:'Comprende la salud holística', path1_d:'La salud holística aborda a la persona de forma integral —cuerpo, mente y espíritu—. Combina terapias naturales basadas en evidencia con cambios de estilo de vida para apoyar un bienestar más profundo y sostenible.',
-    path2_t:'Define tu objetivo de bienestar', path2_d:'Elige un área prioritaria para empezar: estrés, salud digestiva, energía, sueño, inflamación, equilibrio hormonal, salud inmunitaria o manejo de peso. Enfocarte en una meta hace el proceso más claro.',
+    path2_t:'Define tu objetivo de salud', path2_d:'Elige un área prioritaria para empezar: estrés, salud digestiva, energía, sueño, inflamación, balance hormonal, salud inmunitaria o manejo de peso. Enfocarte en una meta hace el proceso más claro.',
     path3_t:'Lee tu primer artículo', path3_d:'Sumérgete en nuestras guías más consultadas sobre ansiedad, salud intestinal, alimentación antiinflamatoria, rutinas matutinas o higiene del sueño.',
-    path4_t:'Prueba una receta esta semana', path4_d:'La alimentación puede ser una herramienta de apoyo para el bienestar. Comienza con nuestra leche dorada de cúrcuma, batido para la salud intestinal o caldo de huesos.',
+    path4_t:'Prueba una receta esta semana', path4_d:'La alimentación puede ser una herramienta valiosa para el bienestar. Comienza con nuestra leche dorada de cúrcuma, batido para la salud intestinal o caldo de huesos.',
     path5_t:'Descubre el Mercado HV', path5_d:'Hemos seleccionado cuidadosamente productos de bienestar de marcas como iHerb, Amazon, Touchstone y BioGaia, revisando calidad, transparencia y utilidad.',
     path6_t:'Conecta con orientación profesional', path6_d:'¿Quieres profundizar aún más? Explora nuestro directorio de profesionales holísticos: naturópatas, herbolarios y especialistas en medicina funcional.',
     path_cta:'Lee tu primer artículo →',
     recipes_eyebrow:'Recetas de bienestar', recipes_title:'Alimentos como medicina',
-    recipes_desc:'Recetas nutritivas y antiinflamatorias pensadas para apoyar la salud intestinal, aumentar la energía y favorecer el equilibrio hormonal.',
-    badge_anti:'Antiinflamatorio', badge_gut:'Salud intestinal', badge_heal:'Apoyo',
+    recipes_desc:'Recetas nutritivas y antiinflamatorias pensadas para cuidar la salud intestinal, aumentar la energía y favorecer el balance hormonal.',
+    badge_anti:'Antiinflamatorio', badge_gut:'Salud intestinal', badge_heal:'Nutritivo',
     badge_energy:'Energía', badge_sleep:'Sueño', badge_horm:'Hormonas',
     vegan:'Vegano', womens:'Mujer',
     r1_name:'Leche dorada de cúrcuma', r1_desc:'Cúrcuma, jengibre, pimienta negra y leche de coco para apoyar una rutina antiinflamatoria y la salud articular.',
     r2_name:'Batido verde para la salud intestinal', r2_desc:'Kéfir, espinacas, plátano, jengibre y péptidos de colágeno para un desayuno que apoya el microbioma.',
-    r3_name:'Caldo de huesos a fuego lento', r3_desc:'Rico en colágeno, glicina y minerales — un apoyo nutritivo para la mucosa intestinal.',
+    r3_name:'Caldo de huesos a fuego lento', r3_desc:'Rico en colágeno, glicina y minerales — una opción nutritiva para la mucosa intestinal.',
     r4_name:'Leche lunar adaptogénica', r4_desc:'Maca, ashwagandha, cacao y leche de avena caliente — reconfortante y profundamente nutritiva.',
     r5_name:'Té nocturno de saúco', r5_desc:'Saúco, manzanilla, pasiflora y melisa para favorecer el descanso y apoyar el sistema inmunitario.',
-    r6_name:'Bowl de equilibrio hormonal', r6_desc:'Salmón asado, mezcla de semillas, quinoa, aguacate y verduras crucíferas.',
+    r6_name:'Bowl hormonal con semillas', r6_desc:'Salmón asado, mezcla de semillas, quinoa, aguacate y verduras crucíferas.',
     media_eyebrow:'Podcast y video', media_title:'Voces destacadas en<br>salud holística',
     media_desc:'Voces confiables y alineadas con la ciencia en salud holística — seleccionadas para ti.',
     pod1_desc:'Dr. Andrew Huberman sobre herramientas basadas en neurociencia para el sueño, el estrés, el enfoque y el rendimiento.',
     pod2_desc:'Shawn Stevenson cubre la ciencia del sueño, la nutrición, el fitness y la mentalidad con los mejores investigadores.',
     pod3_desc:'Dr. Mark Hyman sobre medicina funcional, longevidad y enfoque de causa raíz.',
     pod4_desc:'Movimiento consciente, alimentación intuitiva, bienestar mental y vida consciente para mujeres.',
-    pod5_desc:'Análisis en profundidad sobre micronutrientes, sauna terapéutica e investigación sobre longevidad, respaldados por evidencia científica.',
-    prac_eyebrow:'Directorio de profesionales', prac_title:'Encuentra apoyo profesional',
+    pod5_desc:'Análisis en profundidad sobre micronutrientes, sauna terapéutica e investigación sobre longevidad, con enfoque basado en evidencia.',
+    prac_eyebrow:'Directorio de profesionales', prac_title:'Encuentra orientación profesional',
     prac_desc:'Profesionales holísticos listos para acompañar tu camino de bienestar natural — en inglés y español.',
     prac_join_btn:'Únete como profesional →',
     prac_feat_eyebrow:'Profesionales destacados', prac_feat_title:'Profesionales de confianza',
+    prac_cs_title:'Profesionales próximamente',
+    prac_cs_desc:'Estamos seleccionando profesionales holísticos verificados en áreas naturales, integrativas, mente-cuerpo y bienestar familiar. Solicita participación para aparecer cuando lancemos el directorio.',
     spec_naturo:'Medicina naturopática', spec_functional:'Medicina funcional',
     spec_herbal:'Herbolaria clínica', spec_tcm:'Acupuntura / MTC',
     spec_nutrition:'Nutrición holística', spec_energy:'Terapias energéticas / somáticas',
     spec_coaching:'Coaching', spec_other:'Otro',
     prac1_desc:'12 años apoyando la salud hormonal de la mujer, la fatiga relacionada con el estrés y los trastornos intestinales desde un enfoque de causa raíz.',
     prac2_desc:'8 años identificando causas raíz de enfermedades crónicas mediante pruebas de laboratorio avanzadas y protocolos personalizados.',
-    prac3_desc:'15 años formulando protocolos herbolarios personalizados para ansiedad, trastornos del sueño y apoyo inmunitario.',
+    prac3_desc:'15 años formulando protocolos herbolarios personalizados para ansiedad, trastornos del sueño y bienestar inmunitario.',
     tag_lab:'Pruebas de laboratorio', tag_chronic:'Enfermedades crónicas', tag_herbs:'Hierbas',
     join_eyebrow:'Para profesionales', join_title:'Únete a la red HolisticVox',
     join_desc:'Conéctate con personas que buscan activamente orientación de salud holística.',
@@ -5156,14 +5207,14 @@ const LANG = {
     book_desc:'Conéctate con un profesional holístico para explorar opciones personalizadas de bienestar — en inglés o español.',
     book_choose_eyebrow:'Elige tu camino', book_choose_title:'Selecciona un tipo de sesión',
     book_s1_t:'Consulta naturopática', book_s1_d:'Sesión de 45 minutos para explorar posibles causas raíz y crear un plan personalizado de bienestar.',
-    book_s2_t:'Sesión de acupuntura', book_s2_d:'Sesión de 60 minutos de MTC para dolor, estrés, fertilidad o apoyo inmunitario.',
+    book_s2_t:'Sesión de acupuntura', book_s2_d:'Sesión de 60 minutos de MTC para dolor, estrés, fertilidad o bienestar inmunitario.',
     book_s3_t:'Coaching nutricional', book_s3_d:'Sesión de nutrición personalizada de 30 minutos para adaptar tu alimentación a tus objetivos de salud.',
-    book_s4_t:'Consulta herbolaria', book_s4_d:'Sesión de 45 minutos para conversar sobre apoyo herbolario personalizado según tus necesidades.',
+    book_s4_t:'Consulta herbolaria', book_s4_d:'Sesión de 45 minutos para conversar sobre orientación herbolaria personalizada según tus necesidades.',
     book_s5_t:'Medicina funcional', book_s5_d:'Consulta de 60 minutos con revisión de laboratorios disponibles y recomendaciones personalizadas.',
     book_s6_t:'Ver todos los profesionales', book_s6_d:'Consulta nuestro directorio completo y reserva directamente con un profesional holístico.',
     autism_eyebrow:'Centro sobre autismo',
     autism_title:'Ácido folínico y autismo:<br>lo que dice la investigación',
-    autism_desc:'Una guía educativa basada en evidencia para padres, familias y personas encargadas del cuidado que exploran enfoques naturales y biomédicos de apoyo relacionados con el trastorno del espectro autista.',
+    autism_desc:'Una guía educativa con respaldo científico para padres, familias y cuidadores que exploran enfoques naturales y biomédicos complementarios relacionados con el trastorno del espectro autista.',
     autism_science_eyebrow:'La ciencia', autism_science_title:'Autoanticuerpos contra el receptor alfa de folato y autismo',
     autism_science_desc:'Uno de los hallazgos relevantes en la investigación sobre autismo involucra una proteína llamada receptor alfa de folato (FRα), que ayuda a transportar folato desde la sangre hacia el cerebro.',
     stat71:'de los niños con TEA dan positivo a autoanticuerpos contra el receptor alfa de folato (FRAA), según una revisión sistemática de 2021.',
@@ -5177,7 +5228,7 @@ const LANG = {
     about_desc:'HolisticVox nació de una creencia simple: la sabiduría de la salud natural, los profesionales confiables y los productos de bienestar de calidad deben ser fáciles de encontrar, entender y aplicar.',
     mission_eyebrow:'Nuestra misión', mission_title:'Arraigado en la naturaleza.<br>Basado en evidencia.',
     mission_desc:'Somos un santuario digital para personas que creen que la salud es más que la ausencia de enfermedad. HolisticVox existe para conectar a quienes buscan bienestar con conocimiento, profesionales y herramientas para vivir mejor de forma natural.',
-    val1_t:'Información respaldada por evidencia científica', val1_d:'Cada recomendación integra conocimientos tradicionales, investigación contemporánea y estándares de calidad respaldados por evidencia científica.',
+    val1_t:'Información con respaldo científico', val1_d:'Cada recomendación integra conocimientos tradicionales, investigación contemporánea y estándares de calidad sustentados por evidencia.',
     val2_t:'Accesible para todos', val2_d:'El bienestar holístico no debería ser un lujo. Facilitamos orientación de salud natural en inglés y español.',
     val3_t:'Enfoque integral', val3_d:'Creemos que la salud incluye lo físico, emocional, energético y espiritual. HolisticVox honra esa totalidad.',
     val4_t:'Independiente', val4_d:'Sin anunciantes que influyan en nuestro contenido. Ganamos a través de comisiones de afiliados, divulgadas de forma transparente.',
@@ -5224,28 +5275,139 @@ const LANG = {
 // ══════════════════════════════════════
 let currentLang = 'en';
 const pageTitles = {
-  home:'HolisticVox – Natural Healing & Holistic Wellness',
-  start:'Start Here – HolisticVox', wellnesshub:'Wellness Hub – HolisticVox',
-  articles:'Wisdom Library – HolisticVox',
-  recipes:'Healing Recipes – HolisticVox', shop:'HV Market – HolisticVox',
-  media:'Podcast & Video – HolisticVox', practitioners:'Practitioners – HolisticVox',
-  autism:'Autism Hub – HolisticVox', about:'About Us – HolisticVox',
+  home:'HolisticVox – Natural Wellness Education & Holistic Living',
+  start:'Start Here – Holistic Wellness Guide | HolisticVox', wellnesshub:'Wellness Hub: Natural Health Topics & Holistic Wellness Categories | HolisticVox',
+  articles:'Natural Wellness Articles, Remedies & Evidence-Based Health Guides | HolisticVox',
+  recipes:'Healing Recipes for Gut Health, Sleep, Inflammation & Hormone Balance | HolisticVox', shop:'HolisticVox Market – Curated Wellness Products',
+  media:'Podcast & Video – Natural Wellness, Nutrition & Longevity Channels | HolisticVox', practitioners:'Holistic Practitioners & Wellness Professionals | HolisticVox',
+  autism:'Autism Hub – Natural & Biomedical Wellness Education | HolisticVox', about:'About HolisticVox – Bilingual Natural Wellness Education',
   contact:'Contact Us – HolisticVox', book:'Book a Session – HolisticVox',
   privacy:'Privacy Policy – HolisticVox', terms:'Terms of Service – HolisticVox',
   disclosure:'Affiliate Disclosure – HolisticVox',
-  women:"Women's Health – HolisticVox", men:"Men's Health – HolisticVox",
-  kids:'Little Ones – HolisticVox', pets:'Pets Health – HolisticVox',
-  remedies:'Natural Remedies – HolisticVox', mindbody:'Mind & Body – HolisticVox',
-  acupuncture:'Acupuncture – HolisticVox', soundhealing:'Sound Healing – HolisticVox',
-  breathwork:'Breathwork – HolisticVox', forestbathing:'Forest Bathing – HolisticVox',
-  antiinflammatory:'Anti-Inflammatory Diet – HolisticVox', fasting:'Intermittent Fasting – HolisticVox',
-  gutmicrobiome:'Gut Microbiome – HolisticVox', longevity:'Longevity – HolisticVox',
-  detox:'Detoxification – HolisticVox', sleep:'Sleep Optimization – HolisticVox',
-  massage:'Massage & Body Therapies – HolisticVox', herbalism:'Herbalism – HolisticVox',
-  efttapping:'EFT Tapping – HolisticVox', holistickids:'Holistic Pediatrics – HolisticVox',
-  menopause:'Menopause Naturally – HolisticVox', holisticpregnancy:'Holistic Pregnancy – HolisticVox',
-  menshormones:"Men's Hormonal Health – HolisticVox", elderwellness:'Elder Wellness – HolisticVox'
+  women:"Women's Health: Hormones, Menopause, Fertility & Natural Wellness | HolisticVox", men:"Men's Health: Testosterone, Energy, Immune Health & Longevity | HolisticVox",
+  kids:'Little Ones: Natural Children’s Health, Sleep, Immunity & Gut Health | HolisticVox', pets:'Pets Health: Natural Pet Wellness, Anxiety, Mobility & Gut Health | HolisticVox',
+  remedies:'Natural Remedies: Herbs, Sleep, Stress, Digestion & Holistic Health | HolisticVox', mindbody:'Mind & Body Wellness: Reiki, Meditation, Yoga & Nervous System Health | HolisticVox',
+  acupuncture:'Acupuncture: Pain, Stress, Sleep & Traditional Chinese Medicine | HolisticVox', soundhealing:'Sound Healing: Frequency, Relaxation & Nervous System Wellness | HolisticVox',
+  breathwork:'Breathwork: Stress Relief, Focus, Energy & Emotional Regulation | HolisticVox', forestbathing:'Forest Bathing: Nature Therapy, Immunity & Cortisol Reduction | HolisticVox',
+  antiinflammatory:'Anti-Inflammatory Diet: Foods, Recipes & Chronic Inflammation | HolisticVox', fasting:'Intermittent Fasting: Metabolic Health, Autophagy & Clarity | HolisticVox',
+  gutmicrobiome:'Gut Microbiome: Probiotics, Fermented Foods & Gut-Brain Health | HolisticVox', longevity:'Longevity & Prevention: Healthy Aging, Cellular Health & Brain Support | HolisticVox',
+  detox:'Detoxification: Liver, Lymph, Hydration & Daily Exposure Reduction | HolisticVox', sleep:'Sleep Optimization: Circadian Rhythm, Magnesium & Restorative Recovery | HolisticVox',
+  massage:'Massage & Body Therapies: Pain, Recovery, Relaxation & Lymphatic Care | HolisticVox', herbalism:'Herbalism: Herbs, Preparations, Safety & Natural Wellness Education | HolisticVox',
+  efttapping:'EFT Tapping: Stress, Fear, Habits & Emotional Self-Regulation | HolisticVox', holistickids:'Holistic Pediatrics: Children’s Nutrition, Sleep, Immunity & Family Wellness | HolisticVox',
+  menopause:'Menopause Naturally: Hot Flashes, Sleep, Bones & Hormone Balance | HolisticVox', holisticpregnancy:'Holistic Pregnancy: Food, Stress, Gentle Wellness & Practitioner Guidance | HolisticVox',
+  menshormones:"Men's Hormonal Health: Testosterone, Strength, Recovery & Metabolism | HolisticVox", elderwellness:'Elder Wellness: Mobility, Brain Health, Nutrition & Healthy Aging | HolisticVox'
 };
+
+const pageDescriptions = {
+  home:'HolisticVox offers bilingual natural wellness education, holistic health articles, healing recipes, curated wellness products, and practitioner resources grounded in careful evidence-based language.',
+  start:'Start your holistic wellness journey with simple steps for natural remedies, nutrition, sleep, stress support, gut health, inflammation, and safe practitioner guidance.',
+  wellnesshub:'Explore HolisticVox wellness categories including women’s health, men’s health, children, pets, anxiety, gut health, sleep, inflammation, hormones, autism, longevity, recipes, and holistic living.',
+  articles:'Read HolisticVox articles on natural remedies, gut health, stress relief, sleep support, supplements, anti-inflammatory foods, cancer prevention, pets, children, and longevity.',
+  recipes:'Find healing recipes for anti-inflammatory support, gut health, sleep, immune wellness, hormone balance, and family-friendly holistic nutrition.',
+  shop:'Explore curated wellness products and affiliate partner resources for supplements, natural health, nutrition, holistic living, and precious metals wellness education.',
+  media:'Discover wellness podcasts and video channels on functional medicine, nutrition, sleep, stress, longevity, and holistic health, with Spanish guidance for English-only videos.',
+  practitioners:'Learn about holistic practitioner specialties including naturopathy, herbalism, acupuncture, functional medicine, nutrition coaching, integrative care, and wellness education.',
+  autism:'Educational resources for families exploring natural, biomedical, nutritional, and practitioner-guided support related to autism spectrum wellness.',
+  about:'Learn about HolisticVox, a bilingual natural wellness platform sharing evidence-based holistic education, healing recipes, practitioner resources, and curated wellness tools.',
+  women:'Women’s health education covering hormones, menopause, fertility, pregnancy, emotional wellness, essential oils, nutrition, sleep, and holistic living.',
+  men:'Men’s health education covering testosterone, immune health, stress, sleep, strength, metabolism, vitality, longevity, and precious metals wellness education.',
+  kids:'Natural children’s health resources for families, including immune health, probiotics, sleep routines, nutrition, autism-related education, and careful pediatric guidance.',
+  pets:'Natural pet wellness education including probiotics, anxiety relief, joint mobility, aging pets, digestion, skin health, and veterinary-guided care.',
+  remedies:'Natural remedies education covering herbs, minerals, breathwork, lifestyle foundations, stress relief, sleep, digestion, and responsible holistic health choices.',
+  mindbody:'Mind and body wellness education on Reiki, meditation, yoga, breathwork, massage, nervous system regulation, emotional balance, and stress relief.',
+  recipes:'Healing recipes for inflammation, gut health, immune support, sleep, hormones, family wellness, and everyday holistic nutrition.',
+  longevity:'Evidence-based longevity education covering prevention, healthy aging, sleep, movement, sauna, micronutrients, inflammation, and metabolic health.',
+  sleep:'Natural sleep optimization guidance on circadian rhythm, magnesium, light exposure, evening routines, nervous system calm, and restorative recovery.',
+  contact:'Contact HolisticVox for questions about natural wellness education, practitioner resources, partnerships, affiliate opportunities, and business collaborations.'
+};
+
+const pageTitlesEs = {
+  home:'HolisticVox – Bienestar Natural, Salud Holística y Educación Bilingüe',
+  start:'Empieza Aquí – Guía de Bienestar Holístico | HolisticVox',
+  wellnesshub:'Centro para el bienestar: Categorías de Salud Natural | HolisticVox',
+  articles:'Artículos de Bienestar Natural, Remedios y Guías de Salud | HolisticVox',
+  recipes:'Recetas Saludables para Intestino, Sueño, Inflamación y Balance Hormonal | HolisticVox',
+  shop:'Mercado HolisticVox – Productos de Bienestar Seleccionados',
+  media:'Podcast y Video – Bienestar Natural, Nutrición y Longevidad | HolisticVox',
+  practitioners:'Profesionales de Salud Holística y Bienestar | HolisticVox',
+  autism:'Centro sobre Autismo – Educación Natural y Biomédica | HolisticVox',
+  about:'Sobre HolisticVox – Educación Bilingüe de Bienestar Natural',
+  women:'Salud Femenina: Hormonas, Menopausia, Fertilidad y Bienestar Natural | HolisticVox',
+  men:'Salud Masculina: Testosterona, Energía, Inmunidad y Longevidad | HolisticVox',
+  kids:'Niños y Familia: Salud Infantil Natural, Sueño, Inmunidad e Intestino | HolisticVox',
+  pets:'Salud de Mascotas: Ansiedad, Movilidad, Intestino y Bienestar Natural | HolisticVox',
+  remedies:'Remedios Naturales: Hierbas, Sueño, Estrés, Digestión y Salud Holística | HolisticVox',
+  mindbody:'Mente y Cuerpo: Reiki, Meditación, Yoga y Sistema Nervioso | HolisticVox',
+  longevity:'Longevidad y Prevención: Envejecimiento Saludable, Cerebro y Salud Celular | HolisticVox',
+  sleep:'Recuperación del Sueño: Ritmo Circadiano, Magnesio y Descanso | HolisticVox',
+  contact:'Contacto – HolisticVox'
+};
+
+const pageDescriptionsEs = {
+  home:'HolisticVox ofrece educación bilingüe sobre bienestar natural, artículos de salud holística, recetas saludables, productos seleccionados y recursos para tomar decisiones con información previa.',
+  start:'Empieza tu camino de bienestar holístico con pasos simples sobre remedios naturales, nutrición, sueño, estrés, salud intestinal, inflamación y orientación profesional.',
+  wellnesshub:'Explora categorías de bienestar natural como salud femenina, salud masculina, niños, mascotas, ansiedad, salud intestinal, sueño, inflamación, hormonas, autismo, longevidad y recetas.',
+  articles:'Lee artículos de HolisticVox sobre remedios naturales, salud intestinal, manejo del estrés, sueño, suplementos, alimentos antiinflamatorios, prevención, niños, mascotas y longevidad.',
+  recipes:'Encuentra recetas saludables para acompañar el bienestar digestivo, el descanso, la inmunidad, el balance hormonal y la nutrición holística de la familia.',
+  shop:'Explora productos de bienestar seleccionados y recursos de afiliados sobre suplementos, salud natural, nutrición, vida holística y educación sobre bienestar mineral.',
+  media:'Descubre podcasts y videos sobre medicina funcional, nutrición, sueño, estrés, longevidad y salud holística, con notas en español cuando los videos están en inglés.',
+  practitioners:'Conoce especialidades como naturopatía, herbolaria, acupuntura, medicina funcional, nutrición, bienestar integrativo y educación en salud holística.',
+  autism:'Recursos educativos para familias que exploran enfoques naturales, biomédicos, nutricionales y guiados por profesionales relacionados con el bienestar en el espectro autista.',
+  about:'Conoce HolisticVox, una plataforma bilingüe de bienestar natural con educación holística, recetas saludables, recursos profesionales y herramientas seleccionadas.',
+  women:'Educación de salud femenina sobre hormonas, menopausia, fertilidad, embarazo, bienestar emocional, aceites esenciales, nutrición, sueño y vida holística.',
+  men:'Educación de salud masculina sobre testosterona, inmunidad, estrés, sueño, fuerza, metabolismo, vitalidad, longevidad y bienestar mineral.',
+  kids:'Recursos de salud infantil natural para familias, incluyendo inmunidad, probióticos, rutinas de sueño, nutrición, autismo y orientación pediátrica responsable.',
+  pets:'Educación de bienestar natural para mascotas, incluyendo probióticos, ansiedad, movilidad articular, mascotas mayores, digestión, piel y cuidado con guía veterinaria.',
+  remedies:'Educación sobre remedios naturales, hierbas, minerales, respiración, hábitos diarios, sueño, digestión y decisiones responsables de salud holística.',
+  mindbody:'Educación sobre mente y cuerpo: Reiki, meditación, yoga, respiración, masaje, regulación del sistema nervioso, equilibrio emocional y manejo del estrés.',
+  longevity:'Educación con respaldo científico sobre longevidad, prevención, envejecimiento saludable, sueño, movimiento, sauna, micronutrientes e inflamación.',
+  sleep:'Guía natural para optimizar el sueño con ritmo circadiano, magnesio, luz, rutina nocturna, calma del sistema nervioso y recuperación.',
+  contact:'Contacta a HolisticVox para preguntas sobre bienestar natural, recursos profesionales, alianzas, afiliados y colaboraciones.'
+};
+
+const DEFAULT_DESCRIPTION = pageDescriptions.home;
+
+function setMetaValue(selector, value, attr) {
+  const el = document.querySelector(selector);
+  if (el) el.setAttribute(attr || 'content', value);
+}
+
+function updateSeoMeta(id) {
+  const titleMap = currentLang === 'es' ? pageTitlesEs : pageTitles;
+  const descriptionMap = currentLang === 'es' ? pageDescriptionsEs : pageDescriptions;
+  const title = titleMap[id] || pageTitles[id] || pageTitles.home;
+  const description = descriptionMap[id] || pageDescriptions[id] || DEFAULT_DESCRIPTION;
+  const slug = PAGE_SLUGS[id] || '/';
+  const url = 'https://holisticvox.com' + (slug === '/' ? '/' : slug);
+  document.title = title;
+  setMetaValue('meta[name="description"]', description);
+  setMetaValue('meta[property="og:title"]', title);
+  setMetaValue('meta[property="og:description"]', description);
+  setMetaValue('meta[property="og:url"]', url);
+  setMetaValue('meta[name="twitter:title"]', title);
+  setMetaValue('meta[name="twitter:description"]', description);
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute('href', url);
+  let pageJson = document.getElementById('page-seo-jsonld');
+  if (!pageJson) {
+    pageJson = document.createElement('script');
+    pageJson.type = 'application/ld+json';
+    pageJson.id = 'page-seo-jsonld';
+    document.head.appendChild(pageJson);
+  }
+  pageJson.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': url + '#webpage',
+    url,
+    name: title,
+    headline: title,
+    description,
+    isPartOf: { '@id': 'https://holisticvox.com/#website' },
+    publisher: { '@id': 'https://holisticvox.com/#organization' },
+    inLanguage: currentLang === 'es' ? 'es' : 'en'
+  });
+}
 
 function T(key) { return LANG[currentLang][key] || LANG.en[key] || key; }
 
@@ -5303,7 +5465,7 @@ const SLUG_TO_PAGE = {
 };
 
 const TOPIC_SEARCH = [
-  { title:'Wellness Hub', page:'wellnesshub', group:'Explore', terms:'wellness hub topics centro de bienestar salud integral' },
+  { title:'Wellness Hub', page:'wellnesshub', group:'Explore', terms:'wellness hub topics centro para el bienestar salud integral' },
   { title:"Women's Health", page:'women', group:'Health Areas', terms:'women hormones menopause pregnancy fertility salud mujer hormonas menopausia embarazo' },
   { title:"Men's Health", page:'men', group:'Health Areas', terms:'men testosterone hormones vitality salud hombre testosterona hormonas' },
   { title:'Little Ones', page:'kids', group:'Family', terms:'children kids babies child niños bebes pediatrics familia' },
@@ -5340,6 +5502,50 @@ const TOPIC_SEARCH = [
   { title:'Contact', page:'contact', group:'Help', terms:'contact help support feedback contacto ayuda' }
 ];
 
+const TOPIC_LABEL_ES = {
+  wellnesshub:['Centro para el bienestar', 'Explorar'],
+  women:['Salud femenina', 'Áreas de salud'],
+  men:['Salud masculina', 'Áreas de salud'],
+  kids:['Niños y familia', 'Familia'],
+  pets:['Salud de mascotas', 'Familia'],
+  autism:['Centro sobre autismo', 'Familia'],
+  remedies:['Remedios naturales', 'Artículos'],
+  mindbody:['Mente y cuerpo', 'Mente y cuerpo'],
+  acupuncture:['Acupuntura', 'Prácticas'],
+  tcm:['Medicina tradicional china', 'Prácticas'],
+  ayurveda:['Ayurveda', 'Prácticas'],
+  homeopathy:['Homeopatía', 'Prácticas'],
+  herbalism:['Herbolaria', 'Prácticas'],
+  soundhealing:['Sonoterapia', 'Mente y cuerpo'],
+  breathwork:['Respiración consciente', 'Mente y cuerpo'],
+  forestbathing:['Baños de bosque', 'Mente y cuerpo'],
+  efttapping:['Tapping EFT', 'Mente y cuerpo'],
+  antiinflammatory:['Dieta antiinflamatoria', 'Nutrición'],
+  fasting:['Ayuno intermitente', 'Nutrición'],
+  gutmicrobiome:['Microbioma intestinal', 'Nutrición'],
+  sleep:['Optimización del sueño', 'Estilo de vida'],
+  longevity:['Longevidad', 'Estilo de vida'],
+  detox:['Desintoxicación', 'Estilo de vida'],
+  massage:['Masaje y terapias corporales', 'Prácticas'],
+  holistickids:['Pediatría holística', 'Familia'],
+  holisticpregnancy:['Embarazo holístico', 'Familia'],
+  menopause:['Menopausia natural', 'Salud femenina'],
+  menshormones:['Salud hormonal masculina', 'Salud masculina'],
+  elderwellness:['Bienestar de adultos mayores', 'Áreas de salud'],
+  articles:['Artículos', 'Biblioteca'],
+  recipes:['Recetas saludables', 'Biblioteca'],
+  shop:['Mercado HolisticVox', 'Tienda'],
+  practitioners:['Profesionales', 'Directorio'],
+  media:['Podcast y video', 'Medios'],
+  contact:['Contacto', 'Ayuda']
+};
+
+function topicLabel(item) {
+  if (currentLang !== 'es') return { title: item.title, group: item.group };
+  const label = TOPIC_LABEL_ES[item.page];
+  return label ? { title: label[0], group: label[1] } : { title: item.title, group: item.group };
+}
+
 let topicActiveIndex = -1;
 
 function normalizeSearchText(text) {
@@ -5372,13 +5578,16 @@ function updateTopicResults() {
   topicActiveIndex = -1;
   if (!document.activeElement || document.activeElement !== input) return;
   if (!matches.length) {
-    results.innerHTML = '<div class="topic-result"><strong>No matches yet</strong><span>Try sleep, autism, gut health, reiki, or recipes.</span></div>';
+    results.innerHTML = currentLang === 'es'
+      ? '<div class="topic-result"><strong>Aún no hay resultados</strong><span>Prueba sueño, autismo, salud intestinal, reiki o recetas.</span></div>'
+      : '<div class="topic-result"><strong>No matches yet</strong><span>Try sleep, autism, gut health, reiki, or recipes.</span></div>';
     results.classList.add('show');
     return;
   }
-  results.innerHTML = matches.map((item, index) =>
-    `<button type="button" class="topic-result" data-index="${index}" onclick="chooseTopicResult(${index})"><strong>${item.title}</strong><span>${item.group}</span></button>`
-  ).join('');
+  results.innerHTML = matches.map((item, index) => {
+    const label = topicLabel(item);
+    return `<button type="button" class="topic-result" data-index="${index}" onclick="chooseTopicResult(${index})"><strong>${label.title}</strong><span>${label.group}</span></button>`;
+  }).join('');
   results.dataset.pages = JSON.stringify(matches.map(item => item.page));
   results.classList.add('show');
 }
@@ -5437,22 +5646,22 @@ const ARTICLE_ES = {
   article1: {
     back: 'Volver a Artículos',
     cat: 'Estrés y ansiedad',
-    title: 'Remedios naturales para la ansiedad: 7 enfoques holísticos que pueden ayudar',
+    title: 'Remedios naturales para la ansiedad: 7 enfoques holísticos que pueden apoyar el bienestar',
     meta: ['📖 8 min de lectura', '🌿 Remedios naturales', '✓ Basado en evidencia'],
     intro: [
-      'La ansiedad puede sentirse física, mental y emocional al mismo tiempo. Por eso, un enfoque holístico mira el sistema nervioso completo: sueño, nutrición, respiración, movimiento, apoyo emocional y hábitos diarios.',
-      'Estos recursos son educativos y no sustituyen la atención por un profesional calificado. Si tienes síntomas intensos, ataques de pánico, depresión o tomas medicamentos, busca acompañamiento clínico antes de iniciar suplementos o hierbas.'
+      'La ansiedad puede sentirse en el cuerpo, en la mente y en las emociones al mismo tiempo. Por eso, un enfoque holístico observa el sistema nervioso completo: sueño, nutrición, respiración, movimiento, contención emocional y hábitos diarios.',
+      'Estos recursos son educativos y no sustituyen la atención por un profesional calificado. Si presentas síntomas intensos, ataques de pánico, depresión o tomas medicamentos, busca acompañamiento clínico antes de iniciar suplementos o hierbas.'
     ],
     boxes: [
       ['1. Respiración lenta y regulada', 'La respiración diafragmática, la exhalación prolongada y prácticas como 4-7-8 pueden activar el sistema parasimpático. Practicar de 3 a 5 minutos varias veces al día puede ayudar a reducir la sensación de alarma.'],
-      ['2. Magnesio glicinato', 'El magnesio participa en la relajación muscular y en señales nerviosas relacionadas con la calma. El glicinato suele ser una forma suave para muchas personas, aunque no debe usarse sin orientación si hay enfermedad renal o medicamentos relevantes.'],
-      ['3. Ashwagandha', 'Esta hierba adaptógena se ha estudiado por su relación con estrés percibido y cortisol. Puede no ser adecuada durante embarazo, lactancia, trastornos tiroideos, enfermedades autoinmunes o junto con ciertos medicamentos.'],
+      ['2. Glicinato de magnesio', 'El magnesio participa en la relajación muscular y en señales nerviosas relacionadas con la calma. El glicinato suele ser una forma bien tolerada por muchas personas, aunque no debe usarse sin orientación si existe enfermedad renal o uso de medicamentos relevantes.'],
+      ['3. Ashwagandha', 'Esta hierba adaptógena se ha estudiado por su relación con el estrés percibido y el cortisol. Puede no ser adecuada durante el embarazo, la lactancia, trastornos tiroideos, enfermedades autoinmunes o junto con ciertos medicamentos.'],
       ['4. L-teanina', 'La L-teanina, presente en el té verde, se asocia con relajación sin sedación marcada. Algunas personas la usan para momentos de tensión, concentración o estrés situacional.'],
       ['5. Movimiento suave', 'Caminar, yoga restaurativo, estiramientos y movilidad pueden ayudar al cuerpo a descargar tensión. La constancia suele importar más que la intensidad.'],
-      ['6. Menos estimulantes', 'Cafeína, falta de sueño, alcohol y comidas muy azucaradas pueden aumentar sensibilidad al estrés en algunas personas. Observar patrones personales ayuda a tomar decisiones basadas en informacion.'],
-      ['7. Apoyo profesional', 'Terapia, evaluación médica y apoyo comunitario son parte del bienestar integral. Los remedios naturales funcionan mejor cuando no reemplazan el cuidado adecuado.']
+      ['6. Menos estimulantes', 'Cafeína, falta de sueño, alcohol y comidas muy azucaradas pueden aumentar la sensibilidad al estrés en algunas personas. Observar patrones personales ayuda a tomar decisiones basadas en información.'],
+      ['7. Orientación profesional', 'La terapia, la evaluación médica y una red comunitaria de cuidado también forman parte del bienestar integral. Los remedios naturales funcionan mejor cuando acompañan, y no reemplazan, el cuidado adecuado.']
     ],
-    related: [['article6', 'Sueño y recuperación', 'Remedios naturales para dormir sin melatonina'], ['article3', 'Suplementos', 'Suplementos para estrés y sistema nervioso']]
+    related: [['article6', 'Recuperación del sueño', 'Remedios naturales para dormir sin melatonina'], ['article3', 'Suplementos', 'Suplementos para estrés y sistema nervioso']]
   },
   article2: {
     back: 'Volver a Artículos',
@@ -5461,32 +5670,32 @@ const ARTICLE_ES = {
     meta: ['📖 10 min de lectura', '🥗 Nutrición', '✓ Basado en evidencia'],
     intro: [
       'El intestino participa en la digestión, la inmunidad, la inflamación y la comunicación intestino-cerebro. Cuidarlo no requiere una rutina complicada: los cambios diarios y sostenibles suelen ser los más útiles.',
-      'La información siguiente es educativa. Si hay dolor persistente, sangre, pérdida de peso, diarrea crónica, estreñimiento severo o síntomas nuevos, consulta a un profesional calificado.'
+      'La siguiente información es educativa. Si hay dolor persistente, sangre en las heces, pérdida de peso, diarrea crónica, estreñimiento intenso o síntomas nuevos, consulta a un profesional calificado.'
     ],
     boxes: [
-      ['1. Aumenta fibra de forma gradual', 'Verduras, frutas, legumbres, avena, semillas y granos integrales alimentan bacterias beneficiosas. Aumentar demasiado rápido puede causar gases; avanza poco a poco y con agua suficiente.'],
+      ['1. Aumenta la fibra de forma gradual', 'Verduras, frutas, legumbres, avena, semillas y granos integrales alimentan bacterias beneficiosas. Aumentar la fibra demasiado rápido puede causar gases; avanza poco a poco y con agua suficiente.'],
       ['2. Incluye alimentos fermentados', 'Yogur con cultivos vivos, kéfir, chucrut, kimchi y miso pueden aportar microorganismos útiles. Empieza con porciones pequeñas si eres sensible.'],
-      ['3. Prioriza proteína y comidas completas', 'Comidas equilibradas con proteína, grasas saludables y carbohidratos ricos en fibra favorecen saciedad, glucosa estable y mejor digestión.'],
-      ['4. Reduce ultraprocesados', 'Exceso de azúcar, alcohol, aceites muy refinados y aditivos pueden afectar la diversidad microbiana en algunas personas. No se trata de perfección, sino de patrón general.'],
-      ['5. Maneja estrés y sueño', 'El intestino responde al sistema nervioso. Respiración, descanso, luz natural, caminatas y horarios consistentes pueden apoyar la motilidad y la digestión.']
+      ['3. Prioriza proteína y comidas completas', 'Las comidas equilibradas con proteína, grasas saludables y carbohidratos ricos en fibra favorecen la saciedad, una glucosa más estable y una mejor digestión.'],
+      ['4. Reduce ultraprocesados', 'El exceso de azúcar, alcohol, aceites muy refinados y aditivos puede afectar la diversidad microbiana en algunas personas. No se trata de perfección, sino de cuidar el patrón general.'],
+      ['5. Maneja el estrés y el sueño', 'El intestino responde al sistema nervioso. Respiración, descanso, luz natural, caminatas y horarios consistentes pueden apoyar la motilidad y la digestión.']
     ],
     related: [['article5', 'Nutrición', 'Alimentos antiinflamatorios para usar a diario'], ['article6', 'Sueño', 'Remedios naturales para dormir']]
   },
   article3: {
     back: 'Volver a Artículos',
     cat: 'Suplementos',
-    title: 'Mejores suplementos para el estrés y el apoyo del sistema nervioso',
+    title: 'Mejores suplementos para el estrés y el equilibrio del sistema nervioso',
     meta: ['📖 7 min de lectura', '💊 Suplementos', '✓ Basado en evidencia'],
     intro: [
-      'Los suplementos pueden apoyar una rutina de bienestar, pero no deben reemplazar sueño, alimentación, terapia, evaluación médica o manejo de causas de fondo.',
+      'Los suplementos pueden apoyar una rutina de bienestar, pero no deben reemplazar el sueño, la alimentación, la terapia, la evaluación médica ni el manejo de las causas de fondo.',
       'Antes de iniciar suplementos, especialmente si estás embarazada, lactando, tienes una condición médica o tomas medicamentos, consulta a un profesional calificado.'
     ],
     boxes: [
-      ['Magnesio glicinato', 'Puede apoyar relajación muscular y calma nerviosa. Muchas personas lo prefieren por su tolerancia digestiva, pero la dosis debe individualizarse.'],
-      ['L-teanina', 'Se utiliza para calma y enfoque. Puede ser útil durante estrés situacional y suele ser menos sedante que otras opciones.'],
-      ['Ashwagandha', 'Adaptógeno estudiado para estrés percibido. Requiere cautela con tiroides, autoinmunidad, embarazo, lactancia y medicamentos.'],
-      ['Rhodiola', 'Puede sentirse más estimulante que calmante. Algunas personas la consideran para fatiga relacionada con estrés, pero no es ideal si hay ansiedad sensible a estimulantes.'],
-      ['Omega-3', 'Los ácidos grasos EPA y DHA participan en salud cerebral e inflamación. La calidad, pureza y dosis importan.']
+      ['Glicinato de magnesio', 'Puede apoyar la relajación muscular y la calma del sistema nervioso. Muchas personas lo prefieren por su tolerancia digestiva, pero la dosis debe individualizarse.'],
+      ['L-teanina', 'Se utiliza para apoyar la calma y el enfoque. Puede ser útil durante periodos de estrés situacional y suele ser menos sedante que otras opciones.'],
+      ['Ashwagandha', 'Es un adaptógeno estudiado por su relación con el estrés percibido. Requiere cautela en casos de tiroides, autoinmunidad, embarazo, lactancia y uso de medicamentos.'],
+      ['Rhodiola', 'Puede sentirse más estimulante que calmante. Algunas personas la consideran para fatiga relacionada con el estrés, pero no suele ser ideal si la ansiedad empeora con estimulantes.'],
+      ['Omega-3', 'Los ácidos grasos EPA y DHA participan en la salud cerebral y en la regulación de procesos inflamatorios. La calidad, la pureza y la dosis importan.']
     ],
     related: [['article1', 'Estrés y ansiedad', 'Remedios naturales para la ansiedad'], ['article6', 'Sueño', 'Remedios naturales para dormir']]
   },
@@ -5496,14 +5705,14 @@ const ARTICLE_ES = {
     title: 'Rutina de mañana para energía holística y claridad mental',
     meta: ['📖 6 min de lectura', '☀️ Hábitos diarios', '✓ Basado en evidencia'],
     intro: [
-      'Una mañana estable puede ayudar a regular energía, estado de ánimo, digestión y enfoque. No tiene que ser perfecta; debe ser realista para tu vida.',
+      'Una mañana estable puede ayudar a regular la energía, el estado de ánimo, la digestión y la concentración. No tiene que ser perfecta; tiene que ser sostenible para tu vida.',
       'La meta es construir un ritmo simple: luz, hidratación, movimiento, alimentación y unos minutos de calma.'
     ],
     boxes: [
-      ['1. Luz natural temprano', 'La luz de la mañana ayuda a orientar el reloj circadiano. Si es posible, sal al exterior unos minutos sin mirar directamente al sol.'],
-      ['2. Hidratación consciente', 'Agua al despertar puede apoyar energía y digestión. Algunas personas añaden minerales o electrolitos si sudan mucho o hacen ejercicio.'],
-      ['3. Movimiento suave', 'Caminar, movilidad articular o estiramientos activan circulación sin exigir demasiado al cuerpo.'],
-      ['4. Desayuno o primera comida estable', 'Prioriza proteína, fibra y grasas saludables. Esto puede ayudar con saciedad y concentración.'],
+      ['1. Luz natural temprano', 'La luz de la mañana ayuda a orientar el reloj circadiano. Si es posible, sal al exterior durante unos minutos sin mirar directamente al sol.'],
+      ['2. Hidratación consciente', 'Tomar agua al despertar puede apoyar la energía y la digestión. Algunas personas añaden minerales o electrolitos si sudan mucho o hacen ejercicio.'],
+      ['3. Movimiento suave', 'Caminar, hacer movilidad articular o estiramientos activa la circulación sin exigir demasiado al cuerpo.'],
+      ['4. Desayuno o primera comida estable', 'Prioriza proteína, fibra y grasas saludables. Esto puede favorecer la saciedad y la concentración.'],
       ['5. Pausa mental', 'Tres minutos de respiración, oración, meditación o escritura pueden cambiar el tono del día.']
     ],
     related: [['article6', 'Sueño', 'Optimizar descanso nocturno'], ['article5', 'Nutrición', 'Alimentos antiinflamatorios']]
@@ -5514,208 +5723,208 @@ const ARTICLE_ES = {
     title: 'Alimentos antiinflamatorios y cómo usarlos a diario',
     meta: ['📖 9 min de lectura', '🥗 Nutrición', '✓ Basado en evidencia'],
     intro: [
-      'La inflamación es parte normal de la defensa del cuerpo, pero cuando se vuelve crónica puede relacionarse con dolor, fatiga y riesgo metabólico. La alimentación diaria es una herramienta importante.',
+      'La inflamación forma parte de las defensas normales del cuerpo, pero cuando se vuelve crónica puede relacionarse con dolor, fatiga y riesgo metabólico. La alimentación diaria es una herramienta importante.',
       'Este contenido es educativo. Las necesidades cambian según diagnósticos, alergias, medicamentos y etapa de vida.'
     ],
     boxes: [
-      ['Cúrcuma y jengibre', 'Aportan compuestos vegetales estudiados por su relación con vías inflamatorias. Combinar cúrcuma con pimienta negra o grasa saludable puede mejorar absorción.'],
+      ['Cúrcuma y jengibre', 'Aportan compuestos vegetales estudiados por su relación con vías inflamatorias. Combinar cúrcuma con pimienta negra o una grasa saludable puede mejorar su absorción.'],
       ['Verduras de colores intensos', 'Hojas verdes, brócoli, pimientos, zanahoria y repollo morado aportan antioxidantes, fibra y fitoquímicos.'],
       ['Frutos rojos', 'Arándanos, fresas y moras ofrecen polifenoles y fibra con bajo impacto glucémico para muchas personas.'],
-      ['Omega-3 de alimentos', 'Sardinas, salmón, semillas de chía, linaza y nueces pueden apoyar un patrón antiinflamatorio.'],
+      ['Omega-3 de alimentos', 'Sardinas, salmón, semillas de chía, linaza y nueces pueden formar parte de un patrón alimentario antiinflamatorio.'],
       ['Hierbas, especias y té verde', 'Romero, orégano, canela, ajo y té verde ayudan a sumar diversidad vegetal sin complicar las comidas.']
     ],
     related: [['article2', 'Salud intestinal', 'Mejorar el intestino naturalmente'], ['article19', 'Prevención', 'Estrategias de prevención del cáncer']]
   },
   article6: {
     back: 'Volver a Artículos',
-    cat: 'Sueño y recuperación',
+    cat: 'Recuperación del sueño',
     title: 'Remedios naturales para dormir que pueden ayudar sin melatonina',
     meta: ['📖 8 min de lectura', '🌙 Sueño', '✓ Basado en evidencia'],
     intro: [
-      'Dormir bien depende de ritmo circadiano, estrés, luz, temperatura, alimentación, movimiento y salud general. Los remedios naturales funcionan mejor cuando acompañan una rutina completa.',
+      'Dormir bien depende del ritmo circadiano, el estrés, la luz, la temperatura, la alimentación, el movimiento y la salud general. Los remedios naturales funcionan mejor cuando acompañan una rutina completa.',
       'Si hay insomnio persistente, ronquidos fuertes, pausas al respirar, ansiedad severa o somnolencia diurna intensa, consulta a un profesional calificado.'
     ],
     boxes: [
-      ['Magnesio glicinato', 'Puede apoyar relajación muscular y calma. Es una opción común cuando se busca descanso sin sensación de pesadez al día siguiente.'],
-      ['Raíz de valeriana y pasiflora', 'Son hierbas usadas tradicionalmente para relajación. Deben evitarse con alcohol, sedantes o durante embarazo sin guía profesional.'],
+      ['Glicinato de magnesio', 'Puede apoyar la relajación muscular y la calma. Es una opción común cuando se busca descanso sin sensación de pesadez al día siguiente.'],
+      ['Raíz de valeriana y pasiflora', 'Son hierbas usadas tradicionalmente para favorecer la relajación. Deben evitarse con alcohol, sedantes o durante el embarazo sin guía profesional.'],
       ['Luz y oscuridad', 'Luz natural por la mañana y menos luz brillante por la noche ayudan a sostener el reloj biológico.'],
       ['Temperatura y rutina', 'Un dormitorio fresco, horario constante y una rutina tranquila preparan al sistema nervioso para dormir.'],
-      ['Cafeína y comidas tardías', 'Reducir cafeína después del mediodía y evitar comidas muy pesadas tarde puede mejorar la calidad del sueño.']
+      ['Cafeína y comidas tardías', 'Reducir la cafeína después del mediodía y evitar comidas muy pesadas por la noche puede mejorar la calidad del sueño.']
     ],
     related: [['article1', 'Estrés', 'Remedios naturales para la ansiedad'], ['article4', 'Hábitos', 'Rutina de mañana para claridad']]
   },
   article7: {
-    back: 'Volver a Salud de la Mujer',
-    cat: 'Salud de la mujer · Hormonas',
-    title: 'Cómo apoyar el equilibrio hormonal de forma natural',
-    meta: ['📖 8 min de lectura', '♀ Salud de la mujer', '✓ Educativo'],
-    intro: ['Las hormonas responden al sueño, el estrés, la alimentación, el movimiento, la glucosa y la etapa de vida. Un enfoque natural empieza con fundamentos sostenibles antes de añadir suplementos.'],
+    back: 'Volver a Salud femenina',
+    cat: 'Salud femenina · Hormonas',
+    title: 'Cómo acompañar el balance hormonal de forma segura',
+    meta: ['📖 8 min de lectura', '♀ Salud femenina', '✓ Educativo'],
+    intro: ['Las hormonas responden al sueño, el estrés, la alimentación, el movimiento, la glucosa y la etapa de vida. Un enfoque natural empieza con fundamentos sostenibles antes de considerar suplementos.'],
     boxes: [
       ['Glucosa estable', 'Comidas con proteína, fibra y grasas saludables pueden apoyar energía, saciedad y señales hormonales más estables.'],
-      ['Manejo del estrés', 'El cortisol influye en sueño, apetito, ciclo menstrual y energía. Respiración, descanso y límites diarios importan.'],
-      ['Consulta cuando haya cambios', 'Sangrado anormal, dolor intenso, infertilidad, sofocos severos o síntomas nuevos deben evaluarse por un profesional calificado.']
+      ['Manejo del estrés', 'El cortisol influye en el sueño, el apetito, el ciclo menstrual y la energía. La respiración, el descanso y los límites diarios importan.'],
+      ['Consulta cuando haya cambios', 'Sangrado anormal, dolor intenso, infertilidad, sofocos importantes o síntomas nuevos deben ser evaluados por un profesional calificado.']
     ],
-    related: [['article8', 'Aromaterapia', 'Aceites esenciales para bienestar femenino'], ['recipe6', 'Receta', 'Buddha bowl para apoyo hormonal']]
+    related: [['article8', 'Aromaterapia', 'Aceites esenciales para salud femenina'], ['recipe6', 'Receta', 'Bowl hormonal con semillas']]
   },
   article8: {
-    back: 'Volver a Salud de la Mujer',
-    cat: 'Salud de la mujer · Aromaterapia',
-    title: 'Aceites esenciales para el bienestar femenino',
-    meta: ['📖 6 min de lectura', '♀ Salud de la mujer', '✓ Uso responsable'],
-    intro: ['La aromaterapia puede apoyar relajación, rituales de descanso y bienestar emocional. Debe usarse con cuidado, buena dilución y respeto por alergias, embarazo, mascotas y niños.'],
+    back: 'Volver a Salud femenina',
+    cat: 'Salud femenina · Aromaterapia',
+    title: 'Aceites esenciales para la salud femenina',
+    meta: ['📖 6 min de lectura', '♀ Salud femenina', '✓ Uso responsable'],
+    intro: ['La aromaterapia puede apoyar la relajación, los rituales de descanso y el bienestar emocional. Debe usarse con cuidado, buena dilución y especial atención a alergias, embarazo, mascotas y niños.'],
     boxes: [
-      ['Lavanda', 'Se usa con frecuencia para relajación y rutinas de sueño. Evita aplicarla sin diluir directamente sobre la piel.'],
-      ['Menta', 'Puede sentirse refrescante, pero puede irritar piel sensible y no es ideal cerca de bebés.'],
-      ['Seguridad primero', 'No ingieras aceites esenciales salvo indicación profesional. Si hay embarazo, lactancia o condiciones médicas, consulta antes.']
+      ['Lavanda', 'Se usa con frecuencia para relajación y rutinas de sueño. Evita aplicarla directamente sobre la piel sin diluir.'],
+      ['Menta', 'Puede sentirse refrescante, pero también puede irritar la piel sensible y no es ideal cerca de bebés.'],
+      ['Seguridad primero', 'No ingieras aceites esenciales salvo indicación profesional. Si hay embarazo, lactancia o condiciones médicas, consulta antes de usarlos.']
     ],
-    related: [['article7', 'Hormonas', 'Equilibrio hormonal natural'], ['article9', 'Emociones', 'Flores de Bach']]
+    related: [['article7', 'Hormonas', 'Balance hormonal seguro'], ['article9', 'Emociones', 'Flores de Bach']]
   },
   article9: {
-    back: 'Volver a Salud de la Mujer',
-    cat: 'Salud de la mujer · Bienestar emocional',
+    back: 'Volver a Salud femenina',
+    cat: 'Salud femenina · Bienestar emocional',
     title: 'Flores de Bach para bienestar emocional',
     meta: ['📖 6 min de lectura', '🌸 Bienestar emocional', '✓ Educativo'],
-    intro: ['Las Flores de Bach se usan tradicionalmente como apoyo emocional suave. La evidencia científica es limitada, por lo que conviene presentarlas como una práctica complementaria, no como tratamiento médico.'],
+    intro: ['Las Flores de Bach se usan tradicionalmente como acompañamiento emocional suave. La evidencia científica es limitada, por lo que conviene presentarlas como una práctica complementaria y no como tratamiento médico.'],
     boxes: [
-      ['Uso complementario', 'Pueden integrarse en rituales de autocuidado junto con terapia, sueño, movimiento y apoyo social.'],
-      ['Ansiedad o depresión', 'Síntomas persistentes o intensos requieren ayuda por un profesional calificado.'],
-      ['Elección consciente', 'Observa cómo te sientes, evita promesas absolutas y prioriza seguridad.']
+      ['Uso complementario', 'Pueden integrarse en rituales de autocuidado junto con terapia, sueño, movimiento y una red social de cuidado.'],
+      ['Ansiedad o depresión', 'Los síntomas persistentes o intensos requieren evaluación por un profesional calificado.'],
+      ['Elección consciente', 'Observa cómo te sientes, evita promesas absolutas y prioriza la seguridad.']
     ],
     related: [['article1', 'Ansiedad', 'Remedios naturales para ansiedad'], ['article8', 'Aromaterapia', 'Aceites esenciales']]
   },
   article10: {
-    back: 'Volver a Salud del Hombre',
-    cat: 'Salud del hombre · Testosterona',
-    title: 'Apoyo natural para testosterona: qué puede ayudar',
-    meta: ['📖 8 min de lectura', '♂ Salud del hombre', '✓ Basado en evidencia'],
-    intro: ['La testosterona se relaciona con sueño, grasa corporal, fuerza, estrés, alcohol, medicamentos y condiciones metabólicas. Antes de suplementos, conviene evaluar hábitos y análisis de laboratorio cuando sea necesario.'],
+    back: 'Volver a Salud masculina',
+    cat: 'Salud masculina · Testosterona',
+    title: 'Estrategias naturales para la testosterona: qué puede ayudar',
+    meta: ['📖 8 min de lectura', '♂ Salud masculina', '✓ Basado en evidencia'],
+    intro: ['La testosterona se relaciona con el sueño, la composición corporal, la fuerza, el estrés, el alcohol, los medicamentos y la salud metabólica. Antes de considerar suplementos, conviene evaluar hábitos y, cuando sea necesario, realizar análisis de laboratorio.'],
     boxes: [
-      ['Entrenamiento de fuerza', 'Levantar peso de forma progresiva apoya masa muscular, sensibilidad a la insulina y salud hormonal.'],
-      ['Sueño suficiente', 'Dormir poco puede afectar testosterona y recuperación. Prioriza horarios consistentes.'],
+      ['Entrenamiento de fuerza', 'Levantar peso de forma progresiva apoya la masa muscular, la sensibilidad a la insulina y la salud hormonal.'],
+      ['Sueño suficiente', 'Dormir poco puede afectar la testosterona y la recuperación. Prioriza horarios consistentes.'],
       ['Evaluación médica', 'Fatiga, baja libido o cambios de ánimo pueden tener múltiples causas. Un profesional calificado puede orientar pruebas y tratamiento.']
     ],
-    related: [['article11', 'Minerales', 'Plata y oro coloidal desde una mirada educativa'], ['article12', 'Inmunidad', 'Apoyo inmune para hombres']]
+    related: [['article11', 'Minerales', 'Plata y oro coloidal desde una mirada educativa'], ['article12', 'Inmunidad', 'Bienestar inmunitario para hombres']]
   },
   article11: {
-    back: 'Volver a Salud del Hombre',
-    cat: 'Salud del hombre · Bienestar con metales preciosos',
+    back: 'Volver a Salud masculina',
+    cat: 'Salud masculina · Bienestar con metales preciosos',
     title: 'Plata y oro coloidal: una perspectiva educativa para hombres',
     meta: ['📖 7 min de lectura', '✨ Educación mineral', '✓ Advertencia sanitaria'],
-    intro: ['Los metales preciosos tienen historia en tradiciones de bienestar, pero requieren lenguaje cuidadoso y responsable. No deben presentarse como cura, prevención o tratamiento de enfermedades.'],
+    intro: ['Los metales preciosos tienen historia en distintas tradiciones de bienestar, pero requieren un lenguaje cuidadoso y responsable. No deben presentarse como cura, prevención ni tratamiento de enfermedades.'],
     boxes: [
-      ['Historia y contexto', 'HolisticVox puede explorar historia, usos tradicionales y tendencias emergentes sin hacer afirmaciones médicas no comprobadas.'],
+      ['Historia y contexto', 'HolisticVox puede explorar la historia, los usos tradicionales y las tendencias emergentes sin hacer afirmaciones médicas no comprobadas.'],
       ['Seguridad', 'La plata coloidal puede tener riesgos si se usa de forma inapropiada. Consulta a un profesional calificado antes de ingerir productos minerales.'],
-      ['Decisiones basadas en informacion', 'Busca calidad, transparencia, dosis clara y orientación profesional antes de comprar o usar productos.']
+      ['Decisiones basadas en información', 'Busca calidad, transparencia, dosis clara y orientación profesional antes de comprar o usar productos.']
     ],
-    related: [['article10', 'Hormonas', 'Apoyo natural para testosterona'], ['article12', 'Inmunidad', 'Apoyo inmune']]
+    related: [['article10', 'Hormonas', 'Estrategias naturales para testosterona'], ['article12', 'Inmunidad', 'Bienestar inmunitario']]
   },
   article12: {
-    back: 'Volver a Salud del Hombre',
-    cat: 'Salud del hombre · Sistema inmune',
-    title: 'Apoyo natural del sistema inmune para hombres',
-    meta: ['📖 7 min de lectura', '♂ Salud del hombre', '✓ Basado en evidencia'],
+    back: 'Volver a Salud masculina',
+    cat: 'Salud masculina · Sistema inmune',
+    title: 'Cuidado natural del sistema inmunitario para hombres',
+    meta: ['📖 7 min de lectura', '♂ Salud masculina', '✓ Basado en evidencia'],
     intro: ['La inmunidad depende de sueño, nutrición, ejercicio, estrés, vitamina D, salud intestinal y exposición a infecciones. El objetivo es fortalecer fundamentos, no perseguir soluciones rápidas.'],
     boxes: [
-      ['Proteína y micronutrientes', 'Zinc, vitamina D, vitamina C y selenio participan en función inmune, pero la suplementación debe individualizarse.'],
-      ['Movimiento moderado', 'Actividad regular apoya circulación e inmunidad; el exceso sin recuperación puede tener el efecto contrario.'],
+      ['Proteína y micronutrientes', 'Zinc, vitamina D, vitamina C y selenio participan en la función inmunitaria, pero la suplementación debe individualizarse.'],
+      ['Movimiento moderado', 'La actividad regular apoya la circulación y la inmunidad; el exceso sin recuperación puede tener el efecto contrario.'],
       ['Hábitos preventivos', 'Lavado de manos, descanso y atención médica oportuna siguen siendo esenciales.']
     ],
-    related: [['article2', 'Intestino', 'Salud intestinal natural'], ['article10', 'Hormonas', 'Apoyo para testosterona']]
+    related: [['article2', 'Intestino', 'Salud intestinal natural'], ['article10', 'Hormonas', 'Estrategias para testosterona']]
   },
   article13: {
     back: 'Volver a Pequeños',
-    cat: 'Pequeños · Apoyo inmune',
-    title: 'Apoyo inmune natural para niños',
+    cat: 'Pequeños · Bienestar inmunitario',
+    title: 'Cuidado inmunitario natural para niños',
     meta: ['📖 7 min de lectura', '🍼 Pequeños', '✓ Consulta pediátrica'],
-    intro: ['En niños, la seguridad es prioridad. Sueño, alimentos nutritivos, juego al aire libre, vacunas según orientación médica y atención pediátrica forman la base del apoyo inmune.'],
+    intro: ['En niños, la seguridad es la prioridad. El sueño, los alimentos nutritivos, el juego al aire libre, las vacunas según orientación médica y la atención pediátrica forman la base del bienestar inmunitario.'],
     boxes: [
-      ['Alimentación simple', 'Frutas, verduras, proteína, grasas saludables y alimentos ricos en fibra apoyan crecimiento e inmunidad.'],
+      ['Alimentación simple', 'Frutas, verduras, proteína, grasas saludables y alimentos ricos en fibra apoyan el crecimiento y la inmunidad.'],
       ['Sueño y rutina', 'Los niños necesitan horarios estables y suficiente descanso para recuperación e inmunidad.'],
-      ['Suplementos con cautela', 'Consulta al pediatra antes de vitamina D, zinc, probióticos, hierbas o cualquier suplemento.']
+      ['Suplementos con cautela', 'Consulta al pediatra antes de usar vitamina D, zinc, probióticos, hierbas o cualquier suplemento.']
     ],
-    related: [['article14', 'Intestino', 'Probióticos para niños'], ['article15', 'Sueño', 'Apoyo natural para dormir']]
+    related: [['article14', 'Intestino', 'Probióticos para niños'], ['article15', 'Sueño', 'Orientación natural para dormir']]
   },
   article14: {
     back: 'Volver a Pequeños',
     cat: 'Pequeños · Salud intestinal',
     title: 'Probióticos para niños: guía educativa para familias',
     meta: ['📖 8 min de lectura', '🍼 Pequeños', '✓ Consulta pediátrica'],
-    intro: ['Los probióticos pueden ser útiles en situaciones específicas, pero la cepa, dosis, edad y razón de uso importan. No todos los productos son iguales.'],
+    intro: ['Los probióticos pueden ser útiles en situaciones específicas, pero la cepa, la dosis, la edad y la razón de uso importan. No todos los productos son iguales.'],
     boxes: [
       ['Alimentos primero', 'Yogur con cultivos vivos, kéfir y alimentos ricos en fibra pueden apoyar el microbioma si son apropiados para la edad.'],
-      ['Uso después de antibióticos', 'Algunas cepas tienen evidencia para diarrea asociada a antibióticos, pero conviene consultar al pediatra.'],
+      ['Uso después de antibióticos', 'Algunas cepas tienen evidencia para la diarrea asociada a antibióticos, pero conviene consultar al pediatra.'],
       ['Señales de alarma', 'Dolor persistente, diarrea prolongada, sangre o pérdida de peso requieren evaluación médica.']
     ],
-    related: [['article13', 'Inmunidad', 'Apoyo inmune natural'], ['article2', 'Intestino', 'Salud intestinal']]
+    related: [['article13', 'Inmunidad', 'Cuidado inmunitario natural'], ['article2', 'Intestino', 'Salud intestinal']]
   },
   article15: {
     back: 'Volver a Pequeños',
     cat: 'Pequeños · Sueño',
-    title: 'Apoyo natural para el sueño infantil',
+    title: 'Orientación natural para el sueño infantil',
     meta: ['📖 7 min de lectura', '🍼 Pequeños', '✓ Consulta pediátrica'],
-    intro: ['El sueño infantil se apoya con rutina, ambiente, conexión emocional y horarios apropiados. Antes de suplementos, vale la pena revisar fundamentos.'],
+    intro: ['El sueño infantil se apoya con rutina, ambiente, conexión emocional y horarios apropiados. Antes de considerar suplementos, vale la pena revisar los fundamentos.'],
     boxes: [
       ['Rutina predecible', 'Baño, lectura, luz baja y horario consistente ayudan al cuerpo a anticipar descanso.'],
       ['Pantallas y luz', 'Reducir pantallas antes de dormir puede facilitar la producción natural de melatonina.'],
-      ['Consulta pediátrica', 'Ronquidos, pausas respiratorias, ansiedad intensa o insomnio persistente deben evaluarse.']
+      ['Consulta pediátrica', 'Ronquidos, pausas respiratorias, ansiedad intensa o insomnio persistente deben ser evaluados.']
     ],
-    related: [['article13', 'Inmunidad', 'Apoyo inmune infantil'], ['article6', 'Sueño', 'Remedios naturales para dormir']]
+    related: [['article13', 'Inmunidad', 'Cuidado inmunitario infantil'], ['article6', 'Sueño', 'Remedios naturales para dormir']]
   },
   article16: {
     back: 'Volver a Salud de Mascotas',
     cat: 'Mascotas · Salud intestinal',
     title: 'Probióticos para mascotas: qué muestra la investigación',
     meta: ['📖 8 min de lectura', '🐾 Mascotas', '✓ Consulta veterinaria'],
-    intro: ['Perros y gatos también tienen microbiomas que influyen en digestión, piel e inmunidad. Aun así, los productos deben ser apropiados para especie, tamaño y condición de salud.'],
+    intro: ['Perros y gatos también tienen microbiomas que influyen en la digestión, la piel y la inmunidad. Aun así, los productos deben ser apropiados para la especie, el tamaño y la condición de salud.'],
     boxes: [
       ['Probióticos específicos', 'Las cepas para humanos no siempre son ideales para mascotas. Busca fórmulas veterinarias y orientación profesional.'],
-      ['Diarrea o antibióticos', 'Los probióticos pueden considerarse en ciertos casos, pero vómitos, sangre o decaimiento requieren veterinario.'],
+      ['Diarrea o antibióticos', 'Los probióticos pueden considerarse en ciertos casos, pero vómitos, sangre o decaimiento requieren atención veterinaria.'],
       ['Alimentación y transición', 'Cambios de alimento deben hacerse gradualmente para evitar molestias digestivas.']
     ],
-    related: [['article17', 'Ansiedad', 'Ansiedad en perros y gatos'], ['article18', 'Movilidad', 'Apoyo articular']]
+    related: [['article17', 'Ansiedad', 'Ansiedad en perros y gatos'], ['article18', 'Movilidad', 'Cuidado articular']]
   },
   article17: {
     back: 'Volver a Salud de Mascotas',
     cat: 'Mascotas · Ansiedad y estrés',
-    title: 'Apoyo natural para ansiedad en perros y gatos',
+    title: 'Manejo natural de la ansiedad en perros y gatos',
     meta: ['📖 7 min de lectura', '🐾 Mascotas', '✓ Consulta veterinaria'],
-    intro: ['La ansiedad en mascotas puede relacionarse con separación, ruido, dolor, cambios del hogar o experiencias previas. El apoyo natural debe combinarse con ambiente seguro y guía veterinaria.'],
+    intro: ['La ansiedad en mascotas puede relacionarse con separación, ruido, dolor, cambios en el hogar o experiencias previas. El manejo natural debe combinarse con un ambiente seguro y guía veterinaria.'],
     boxes: [
-      ['Rutina y enriquecimiento', 'Paseos, juego, lugares seguros y horarios predecibles pueden reducir estrés.'],
-      ['L-teanina y opciones calmantes', 'Algunos productos veterinarios usan ingredientes calmantes, pero la dosis debe ser específica para mascota.'],
+      ['Rutina y enriquecimiento', 'Paseos, juego, lugares seguros y horarios predecibles pueden reducir el estrés.'],
+      ['L-teanina y opciones calmantes', 'Algunos productos veterinarios usan ingredientes calmantes, pero la dosis debe ser específica para cada mascota.'],
       ['Aceites esenciales con mucho cuidado', 'Nunca apliques aceites esenciales directamente. Los gatos son especialmente sensibles; consulta al veterinario.']
     ],
-    related: [['article16', 'Intestino', 'Probióticos para mascotas'], ['article18', 'Articulaciones', 'Apoyo para movilidad']]
+    related: [['article16', 'Intestino', 'Probióticos para mascotas'], ['article18', 'Articulaciones', 'Orientación para movilidad']]
   },
   article18: {
     back: 'Volver a Salud de Mascotas',
     cat: 'Mascotas · Salud articular',
-    title: 'Apoyo articular y movilidad para mascotas mayores',
+    title: 'Cuidado articular y movilidad para mascotas mayores',
     meta: ['📖 8 min de lectura', '🐾 Mascotas', '✓ Consulta veterinaria'],
-    intro: ['La rigidez, dificultad para saltar o caminar menos pueden indicar dolor articular. Un veterinario puede confirmar la causa y sugerir un plan seguro.'],
+    intro: ['La rigidez, la dificultad para saltar o caminar menos de lo habitual pueden indicar dolor articular. Un veterinario puede confirmar la causa y sugerir un plan seguro.'],
     boxes: [
-      ['Peso saludable', 'Mantener peso adecuado reduce carga en articulaciones y mejora movilidad.'],
-      ['Omega-3', 'EPA y DHA pueden apoyar inflamación articular, pero la dosis debe calcularse por peso y producto.'],
-      ['Movimiento suave', 'Paseos cortos, superficies antideslizantes y rampas pueden mejorar comodidad diaria.']
+      ['Peso saludable', 'Mantener un peso adecuado reduce la carga sobre las articulaciones y mejora la movilidad.'],
+      ['Omega-3', 'EPA y DHA pueden apoyar la regulación de procesos inflamatorios articulares, pero la dosis debe calcularse según peso y producto.'],
+      ['Movimiento suave', 'Paseos cortos, superficies antideslizantes y rampas pueden mejorar la comodidad diaria.']
     ],
-    related: [['article16', 'Intestino', 'Probióticos para mascotas'], ['article17', 'Ansiedad', 'Apoyo para estrés']]
+    related: [['article16', 'Intestino', 'Probióticos para mascotas'], ['article17', 'Ansiedad', 'Manejo del estrés']]
   },
   article19: {
     back: 'Volver a Longevidad y Prevención',
     cat: 'Longevidad y prevención · Prevención del cáncer',
-    title: 'Prevención natural del cáncer: 12 estrategias basadas en evidencia que pueden reducir el riesgo',
+    title: 'Prevención natural del cáncer: 12 estrategias basadas en evidencia que pueden ayudar a reducir el riesgo',
     meta: ['📖 15 min de lectura', '⚡ Longevidad y prevención', '✓ Investigación revisada'],
     disclaimer: '<strong>Advertencia sanitaria:</strong> Este artículo tiene fines educativos únicamente y no constituye consejo médico. No está destinado a prevenir, diagnosticar, tratar ni curar ninguna enfermedad. Si tienes cáncer, antecedentes familiares de cáncer o alto riesgo, consulta a tu oncólogo o a un profesional calificado antes de hacer cambios en tu alimentación, suplementos o rutina de bienestar.',
     intro: [
-      'La prevención del cáncer debe comunicarse con mucho cuidado. Ningún alimento, suplemento o rutina garantiza prevenir cáncer, pero la investigación sí relaciona ciertos hábitos con menor riesgo poblacional.',
-      'Este artículo es educativo y no constituye consejo médico. Si tienes cáncer, antecedentes familiares o alto riesgo, consulta a tu oncólogo o a un profesional calificado antes de cambiar dieta, suplementos o rutina.'
+      'La prevención del cáncer debe comunicarse con mucho cuidado. Ningún alimento, suplemento o rutina garantiza prevenir el cáncer, pero la investigación sí relaciona ciertos hábitos con un menor riesgo a nivel poblacional.',
+      'Este artículo es educativo y no constituye consejo médico. Si tienes cáncer, antecedentes familiares o alto riesgo, consulta a tu oncólogo o a un profesional calificado antes de cambiar tu alimentación, suplementos o rutina.'
     ],
     boxes: [
-      ['1. Patrón de alimentación antiinflamatorio', 'Verduras, frutas, legumbres, fibra, granos integrales y grasas saludables apoyan peso, glucosa, microbioma e inflamación.'],
+      ['1. Patrón de alimentación antiinflamatorio', 'Verduras, frutas, legumbres, fibra, granos integrales y grasas saludables apoyan el peso, la glucosa, el microbioma y la regulación de la inflamación.'],
       ['2. Peso y composición corporal saludables', 'Mantener un peso saludable se asocia con menor riesgo de varios tipos de cáncer. La meta debe ser sostenible y supervisada cuando sea necesario.'],
-      ['3. Actividad física regular', 'Caminar, fuerza y movimiento diario apoyan metabolismo, inmunidad y regulación hormonal.'],
-      ['4. Alcohol y tabaco', 'Evitar tabaco y limitar alcohol son de las medidas preventivas con mayor respaldo.'],
-      ['5. Sueño y ritmo circadiano', 'Dormir bien ayuda a reparación, inmunidad y hormonas. Turnos nocturnos o sueño crónicamente irregular pueden afectar salud.'],
+      ['3. Actividad física regular', 'Caminar, entrenar fuerza y mantener movimiento diario apoyan el metabolismo, la inmunidad y la regulación hormonal.'],
+      ['4. Alcohol y tabaco', 'Evitar el tabaco y limitar el alcohol son dos de las medidas preventivas con mayor respaldo.'],
+      ['5. Sueño y ritmo circadiano', 'Dormir bien ayuda a la reparación, la inmunidad y la regulación hormonal. Los turnos nocturnos o el sueño crónicamente irregular pueden afectar la salud.'],
       ['6. Detección temprana', 'Mamografías, colonoscopias, pruebas cervicales y chequeos según edad y riesgo son parte esencial de la prevención responsable.']
     ],
     related: [['article5', 'Nutrición', 'Alimentos antiinflamatorios'], ['article2', 'Intestino', 'Salud intestinal'], ['article6', 'Sueño', 'Remedios naturales para dormir']]
@@ -5724,15 +5933,15 @@ const ARTICLE_ES = {
 
 const ARTICLE_ORIGINALS = {};
 const STATIC_ES_TEXT = {
-  'Wellness Hub': 'Centro de bienestar',
+  'Wellness Hub': 'Centro para el bienestar',
   'Explore Natural Wellness Topics': 'Explora temas de bienestar natural',
   'Find the right starting point': 'Encuentra el mejor punto de partida',
-  "Women's Health": 'Salud de la mujer',
-  "Men's Health": 'Salud del hombre',
-  'Little Ones': 'Pequeños',
+  "Women's Health": 'Salud femenina',
+  "Men's Health": 'Salud masculina',
+  'Little Ones': 'Niños y bebés',
   'Pets Health': 'Salud de mascotas',
   'Natural Remedies': 'Remedios naturales',
-  'Autism Hub': 'Centro de autismo',
+  'Autism Hub': 'Centro sobre autismo',
   'Mind & Body': 'Mente y cuerpo',
   'Acupuncture': 'Acupuntura',
   'Ayurveda': 'Ayurveda',
@@ -5754,12 +5963,12 @@ const STATIC_ES_TEXT = {
   'Holistic Pregnancy': 'Embarazo holístico',
   "Men's Hormonal Health": 'Salud hormonal masculina',
   'Elder Wellness': 'Bienestar en adultos mayores',
-  'Hormones, menopause, pregnancy, emotional wellness, and natural daily support.': 'Hormonas, menopausia, embarazo, bienestar emocional y apoyo natural diario.',
+  'Hormones, menopause, pregnancy, emotional wellness, and natural daily support.': 'Hormonas, menopausia, embarazo, bienestar emocional y cuidado natural diario.',
   'Testosterone, immune health, stress, vitality, and prevention-focused care.': 'Testosterona, salud inmune, estrés, vitalidad y cuidado enfocado en prevención.',
-  'Natural immune support, sleep, gut health, and family wellness foundations.': 'Apoyo inmune natural, sueño, salud intestinal y bases de bienestar familiar.',
-  'Gentle natural support for digestion, anxiety, mobility, and aging pets.': 'Apoyo natural suave para digestión, ansiedad, movilidad y mascotas mayores.',
-  'Evidence-informed herbs, foods, and home protocols for common concerns.': 'Hierbas, alimentos y protocolos caseros con información basada en evidencia para inquietudes comunes.',
-  'Educational biomedical and holistic support topics for parents and caregivers.': 'Temas educativos de apoyo biomédico y holístico para padres, familias y cuidadores.',
+  'Natural immune support, sleep, gut health, and family wellness foundations.': 'Cuidado inmunitario natural, sueño, salud intestinal y bases de bienestar familiar.',
+  'Gentle natural support for digestion, anxiety, mobility, and aging pets.': 'Cuidado natural suave para digestión, ansiedad, movilidad y mascotas mayores.',
+  'Evidence-informed herbs, foods, and home protocols for common concerns.': 'Hierbas, alimentos y protocolos caseros con información fundamentada para inquietudes comunes.',
+  'Educational biomedical and holistic support topics for parents and caregivers.': 'Temas educativos biomédicos y holísticos para padres, familias y cuidadores.',
   'Meditation, breath, movement, emotional regulation, and nervous system tools.': 'Meditación, respiración, movimiento, regulación emocional y herramientas para el sistema nervioso.',
   'Traditional point-based care for pain, stress, sleep, fertility, and balance.': 'Cuidado tradicional basado en puntos para dolor, estrés, sueño, fertilidad y equilibrio.',
   'Ancient constitution-based wellness, digestion, herbs, and daily rhythms.': 'Bienestar tradicional basado en constitución, digestión, hierbas y ritmos diarios.',
@@ -5769,37 +5978,37 @@ const STATIC_ES_TEXT = {
   'Nature immersion for immunity, cortisol reduction, and emotional grounding.': 'Inmersión en la naturaleza para inmunidad, reducción del cortisol y estabilidad emocional.',
   'Foods, recipes, and habits that calm chronic inflammation naturally.': 'Alimentos, recetas y hábitos que ayudan a calmar la inflamación crónica de forma natural.',
   'Simple fasting rhythms for metabolic health, autophagy, and clarity.': 'Ritmos simples de ayuno para salud metabólica, autofagia y claridad.',
-  'Fermented foods, prebiotics, probiotics, and gut-brain support.': 'Alimentos fermentados, prebióticos, probióticos y apoyo intestino-cerebro.',
-  'Prevention, cellular health, brain support, sleep, and healthy aging.': 'Prevención, salud celular, apoyo cerebral, sueño y envejecimiento saludable.',
-  'Gentle support for liver, lymph, sweating, hydration, and daily exposure reduction.': 'Apoyo suave para hígado, linfa, sudoración, hidratación y reducción de exposiciones diarias.',
+  'Fermented foods, prebiotics, probiotics, and gut-brain support.': 'Alimentos fermentados, prebióticos, probióticos y conexión intestino-cerebro.',
+  'Prevention, cellular health, brain support, sleep, and healthy aging.': 'Prevención, salud celular, salud cerebral, sueño y envejecimiento saludable.',
+  'Gentle support for liver, lymph, sweating, hydration, and daily exposure reduction.': 'Cuidado suave del hígado, linfa, sudoración, hidratación y reducción de exposiciones diarias.',
   'Natural sleep routines, minerals, herbs, light exposure, and nervous system calm.': 'Rutinas naturales de sueño, minerales, hierbas, luz y calma del sistema nervioso.',
   'Hands-on modalities for pain, recovery, relaxation, and embodied healing.': 'Modalidades corporales para dolor, recuperación, relajación y bienestar físico.',
   'Plant-based remedies, preparations, safety, and practical herb education.': 'Remedios vegetales, preparaciones, seguridad y educación práctica sobre hierbas.',
   'Emotional freedom technique for stress, fear, habits, and self-regulation.': 'Técnica de liberación emocional para estrés, miedo, hábitos y autorregulación.',
-  'Whole-child wellness, nutrition, sleep, immunity, and parent-friendly support.': 'Bienestar integral infantil, nutrición, sueño, inmunidad y apoyo para familias.',
-  'Hot flashes, mood, bones, sleep, and hormone-supportive lifestyle tools.': 'Sofocos, estado de ánimo, huesos, sueño y herramientas de estilo de vida para apoyo hormonal.',
-  'Gentle pregnancy wellness, food, stress support, and practitioner guidance.': 'Bienestar suave durante el embarazo, alimentación, apoyo para estrés y orientación profesional.',
+  'Whole-child wellness, nutrition, sleep, immunity, and parent-friendly support.': 'Bienestar integral infantil, nutrición, sueño, inmunidad y orientación para familias.',
+  'Hot flashes, mood, bones, sleep, and hormone-supportive lifestyle tools.': 'Sofocos, estado de ánimo, huesos, sueño y hábitos diarios para el balance hormonal.',
+  'Gentle pregnancy wellness, food, stress support, and practitioner guidance.': 'Bienestar suave durante el embarazo, alimentación, manejo del estrés y orientación profesional.',
   'Energy, testosterone, strength, recovery, sleep, and metabolic foundations.': 'Energía, testosterona, fuerza, recuperación, sueño y bases metabólicas.',
-  'Mobility, brain health, nutrition, sleep, and graceful aging support.': 'Movilidad, salud cerebral, nutrición, sueño y apoyo para envejecer con bienestar.',
+  'Mobility, brain health, nutrition, sleep, and graceful aging support.': 'Movilidad, salud cerebral, nutrición, sueño y recursos para envejecer con bienestar.',
   'Start Here': 'Empieza aquí',
   'Understanding Holistic Healing': 'Comprender la sanación holística',
   'A simple guide to whole-person wellness: body, mind, spirit, lifestyle, and root-cause care.': 'Una guía simple para el bienestar integral: cuerpo, mente, espíritu, estilo de vida y cuidado de la causa raíz.',
   'The Core Idea': 'La idea central',
   'Root Cause First': 'Primero la causa raíz',
-  'Healing Recipes': 'Recetas sanadoras',
+  'Healing Recipes': 'Recetas de bienestar',
   'Food as Medicine': 'La comida como medicina',
   'Golden Turmeric Latte': 'Leche dorada de cúrcuma',
   'Gut-Healing Green Smoothie': 'Batido verde para la salud intestinal',
   'Slow-Cooked Bone Broth': 'Caldo de huesos a fuego lento',
   'Adaptogen Moon Milk': 'Leche lunar adaptogénica',
   'Elderberry Bedtime Tea': 'Té nocturno de saúco',
-  'Hormone-Balancing Buddha Bowl': 'Bowl de equilibrio hormonal',
+  'Hormone-Balancing Buddha Bowl': 'Bowl hormonal con semillas',
   'Ingredients': 'Ingredientes',
   'Instructions': 'Instrucciones',
-  'More Healing Recipes': 'Más recetas sanadoras',
+  'More Healing Recipes': 'Más recetas de bienestar',
   'Anti-Inflammatory': 'Antiinflamatorio',
   'Gut Health': 'Salud intestinal',
-  'Healing': 'Sanador',
+  'Healing': 'Nutritivo',
   'Energy': 'Energía',
   'Sleep': 'Sueño',
   'Hormones': 'Hormonas',
@@ -5818,24 +6027,171 @@ const STATIC_ES_TEXT = {
   'HolisticVox Brand Store': 'Tienda de marca HolisticVox',
   'Our Brand Store is Coming Soon': 'Nuestra tienda de marca llegará pronto',
   'Notify Me When It Launches →': 'Avísame cuando se lance →',
-  'Be the first to know when HolisticVox merchandise launches!': 'Sé la primera persona en saber cuándo se lance la mercancía de HolisticVox.',
+  'Be the first to know when HolisticVox merchandise launches!': 'Sé la primera persona en saber cuándo se lancen los productos de HolisticVox.',
   'Submit →': 'Enviar →',
   'Coming Soon': 'Próximamente',
   'Coming Soon!': '¡Próximamente!',
   'Shop Now →': 'Comprar ahora →',
   'View all →': 'Ver todo →',
-  'Apply to Join →': 'Solicitar unirse →',
+  'Apply to Join →': 'Solicitar participación →',
   'Book Session': 'Reservar sesión',
   'Contact': 'Contacto',
-  'About': 'Acerca de',
+  'About': 'Nosotros',
   'Articles': 'Artículos',
   'Recipes': 'Recetas',
   'Market': 'Mercado',
   'Practitioners': 'Profesionales',
+  'Choose a topic below to open focused articles, remedies, recipes, and practitioner pathways.': 'Elige un tema para abrir artículos, remedios, recetas y opciones de orientación profesional relacionadas.',
+  'Browse by life stage, system, and modality': 'Explora por etapa de vida, sistema y modalidad',
+  'BROWSE BY LIFE STAGE, SYSTEM, AND MODALITY': 'EXPLORA POR ETAPA DE VIDA, SISTEMA Y MODALIDAD',
+  'Mind & Body Wellness': 'Bienestar de mente y cuerpo',
+  '🧘 Mind & Body Wellness': '🧘 Bienestar de mente y cuerpo',
+  'Reiki, Meditation & Yoga': 'Reiki, meditación y yoga',
+  'Ancient healing practices for modern life — backed by science and centuries of wisdom': 'Prácticas tradicionales de bienestar para la vida moderna, con respaldo histórico y revisión científica',
+  'Reiki is a Japanese energy healing technique developed in the early 20th century by Mikao Usui. The word "Reiki" comes from the Japanese words Rei (universal) and Ki (life energy). Practitioners channel healing energy through their hands to promote physical, emotional, and spiritual wellbeing.': 'El Reiki es una técnica japonesa de bienestar energético desarrollada a comienzos del siglo XX por Mikao Usui. La palabra “Reiki” proviene de los términos japoneses Rei (universal) y Ki (energía vital). Sus practicantes usan la imposición de manos como una práctica complementaria orientada al bienestar físico, emocional y espiritual.',
+  'What Research Shows': 'Lo que muestra la investigación',
+  '✅ What Research Shows': '✅ Lo que muestra la investigación',
+  'Multiple clinical studies show Reiki significantly reduces anxiety, pain, and fatigue — particularly in cancer patients and those with chronic illness. A 2019 meta-analysis found Reiki was more effective than placebo for pain reduction and quality of life improvement.': 'Algunos estudios clínicos han explorado el Reiki como práctica complementaria para ansiedad, dolor y fatiga, especialmente en personas con enfermedades crónicas. La evidencia debe comunicarse con cautela: no sustituye tratamiento médico ni atención por un profesional calificado.',
+  'Launching Soon': 'Lanzamiento próximamente',
+  '⏱ Launching Soon': '⏱ Lanzamiento próximamente',
+  'Practitioners Coming Soon': 'Profesionales próximamente',
+  'We are hand-selecting verified holistic practitioners across natural, integrative, mind-body, and family wellness fields. Apply now to be featured when we launch.': 'Estamos seleccionando profesionales holísticos verificados en áreas naturales, integrativas, mente-cuerpo y bienestar familiar. Solicita participación para aparecer cuando lancemos el directorio.',
+  'Naturopathy': 'Naturopatía',
+  'Functional Medicine': 'Medicina funcional',
+  'Nutrition Coaching': 'Coaching nutricional',
+  'Gold & Silver Wellness': 'Bienestar con oro y plata',
+  'Get in Touch': 'Ponte en contacto',
+  "We're Here to Help": 'Estamos aquí para ayudarte',
+  'Questions about content, products, practitioner listings, or partnerships? We respond within 24–48 hours.': '¿Tienes preguntas sobre contenido, productos, listados profesionales o alianzas? Respondemos en 24 a 48 horas.',
+  'Founder & Editor-in-Chief — General inquiries, content, and partnerships.': 'Fundadora y editora en jefe — consultas generales, contenido y alianzas.',
+  'Founder & Editor-in-Chief': 'Fundadora y editora en jefe',
+  'General inquiries, content, and partnerships.': 'Consultas generales, contenido y alianzas.',
+  'Practitioner Intake': 'Admisión de profesionales',
+  'Our AI coordinator handles all practitioner applications 24/7.': 'Nuestro coordinador de IA recibe solicitudes de profesionales en cualquier momento.',
+  'Start application →': 'Iniciar solicitud →',
+  'Sponsor Partnerships': 'Alianzas y patrocinios',
+  'Our AI partnerships coordinator handles brand sponsorships and affiliate opportunities.': 'Nuestro coordinador de alianzas gestiona patrocinios de marca y oportunidades de afiliados.',
+  'Explore sponsorship →': 'Explorar patrocinio →',
+  'Send Message': 'Enviar mensaje',
+  'Send Message →': 'Enviar mensaje →',
+  'Your Name': 'Tu nombre',
+  'Your Email': 'Tu correo electrónico',
+  'Featured Wellness Partner': 'Socio de bienestar destacado',
+  '⭐ Featured Wellness Partner': '⭐ Socio de bienestar destacado',
+  'Certified organic superfoods, CBD, and cellular health supplements. Third-party tested and HV Approved.': 'Superalimentos orgánicos certificados, CBD y suplementos de salud celular. Probados por terceros y aprobados por HolisticVox.',
+  'Shop Touchstone Essentials →': 'Comprar en Touchstone Essentials →',
+  'Organic superfoods & cellular health': 'Superalimentos orgánicos y salud celular',
+  'Featured Topics': 'Temas destacados',
+  'Important:': 'Importante:',
+  "Women's Health": 'Salud femenina',
+  "♀ Women's Health": '♀ Salud femenina',
+  'Evidence-based natural approaches to hormonal balance, fertility, menopause, energy, and whole-body feminine wellness.': 'Estrategias integrales con respaldo científico para balance hormonal, fertilidad, menopausia, energía y salud femenina.',
+  'FEATURED TOPICS': 'TEMAS DESTACADOS',
+  'Hormonal Balance': 'Balance hormonal',
+  '🌸 Hormonal Balance': '🌸 Balance hormonal',
+  'Fertility & Cycle': 'Fertilidad y ciclo',
+  '🌿 Fertility & Cycle': '🌿 Fertilidad y ciclo',
+  'Menopause Relief': 'Orientación durante la menopausia',
+  '🔥 Menopause Relief': '🔥 Orientación durante la menopausia',
+  'Energy & Vitality': 'Energía y vitalidad',
+  '💪 Energy & Vitality': '💪 Energía y vitalidad',
+  'Stress & Cortisol': 'Estrés y cortisol',
+  '🧘 Stress & Cortisol': '🧘 Estrés y cortisol',
+  '💤 Sleep & Recovery': '💤 Recuperación del sueño',
+  'Articles for Women': 'Artículos de salud femenina',
+  'How to Balance Hormones Naturally: A Complete Guide for Women': 'Cómo acompañar el balance hormonal de forma segura: guía para mujeres',
+  'Seed cycling, maca, Vitex, DIM, and ashwagandha — evidence-based protocols for hormonal balance at every age.': 'Semillas, maca, vitex, DIM y ashwagandha: recursos con respaldo científico para distintas etapas hormonales.',
+  'Essential Oils for Women: Hormones, Mood & Self-Care': 'Aceites esenciales para mujeres: hormonas, estado de ánimo y autocuidado',
+  "Essential Oils for Women's Wellness: The Evidence-Based Guide": 'Aceites esenciales para la salud femenina: guía con respaldo científico',
+  "Essential Oils for Women's Wellness": 'Aceites esenciales para la salud femenina',
+  'Lavender, clary sage, geranium, and rose — safe aromatherapy protocols for feminine wellness.': 'Lavanda, salvia esclarea, geranio y rosa: uso responsable de aromaterapia en la salud femenina.',
+  'Clary sage, lavender, rose otto, frankincense, and geranium — the science behind aromatherapy for women.': 'Salvia esclarea, lavanda, rosa otto, incienso y geranio: revisión científica de la aromaterapia para mujeres.',
+  'Bach Flower Remedies for Emotional Wellness in Women': 'Flores de Bach para la salud emocional femenina',
+  "Bach Flower Remedies for Women's Emotional Wellness": 'Flores de Bach para la salud emocional femenina',
+  'Gentle flower essences for grief, overwhelm, anxiety, and emotional transitions.': 'Esencias florales delicadas para duelo, sobrecarga emocional, ansiedad y transiciones personales.',
+  'Rescue Remedy, Walnut, Mimulus, Olive, and White Chestnut — gentle plant remedies for emotional balance.': 'Rescue Remedy, Walnut, Mimulus, Olive y White Chestnut: opciones florales delicadas para el equilibrio emocional.',
+  'Nutrition & Hormones': 'Nutrición y hormonas',
+  'Hormone-Balancing Buddha Bowl with Seed Cycling': 'Bowl hormonal con rotación de semillas',
+  'Roasted salmon, seed cycling blend, quinoa, avocado, and brassica vegetables for hormonal balance.': 'Salmón asado, mezcla de semillas, quinoa, aguacate y vegetales crucíferos para una alimentación enfocada en hormonas.',
+  'Recipe · 25 min': 'Receta · 25 min',
+  "Find a Women's Health Practitioner →": 'Encuentra una profesional de salud femenina →',
+  "Men's Health": 'Salud masculina',
+  "♂ Men's Health": '♂ Salud masculina',
+  'Natural approaches to testosterone support, energy, stress resilience, gut health, and long-term vitality for men.': 'Enfoques naturales sobre testosterona, energía, resiliencia al estrés, salud intestinal y vitalidad masculina a largo plazo.',
+  'Testosterone Support': 'Salud hormonal masculina',
+  '💪 Testosterone Support': '💪 Salud hormonal masculina',
+  'Energy & Performance': 'Energía y rendimiento',
+  '⚡ Energy & Performance': '⚡ Energía y rendimiento',
+  'Mental Clarity': 'Claridad mental',
+  '🧠 Mental Clarity': '🧠 Claridad mental',
+  'Heart Health': 'Salud cardiovascular',
+  '❤️ Heart Health': '❤️ Salud cardiovascular',
+  'Deep Sleep': 'Sueño profundo',
+  '🦠 Gut Health': '🦠 Salud intestinal',
+  '😴 Deep Sleep': '😴 Sueño profundo',
+  'Articles for Men': 'Artículos para hombres',
+  'Natural Testosterone Support: What Actually Works for Men': 'Estrategias naturales para la testosterona: qué puede ayudar en hombres',
+  'Ashwagandha, zinc, tongkat ali, vitamin D3 — the evidence-based testosterone protocol with real clinical backing.': 'Ashwagandha, zinc, tongkat ali y vitamina D3: información educativa sobre salud hormonal masculina basada en investigación.',
+  'Colloidal Silver & Gold: Premium Wellness for Men': 'Plata y oro coloidal: educación de bienestar para hombres',
+  'Immune support, cognitive clarity, and vitality — how precious metals fit into modern men\'s wellness.': 'Bienestar inmunitario, claridad mental y vitalidad: una mirada educativa sobre metales preciosos en el bienestar masculino moderno.',
+  'Natural Immune Support for Men: Beyond Vitamin C': 'Cuidado inmunitario natural para hombres: más allá de la vitamina C',
+  'Zinc, elderberry, medicinal mushrooms, and lifestyle protocols for resilient immunity.': 'Zinc, saúco, hongos medicinales y hábitos de estilo de vida para apoyar la resiliencia inmunitaria.',
+  'Gentle, evidence-based natural approaches to children\'s health — from immunity to sleep, gut health, and developmental support.': 'Enfoques naturales, cuidadosos y basados en evidencia para la salud infantil: inmunidad, sueño, salud intestinal y desarrollo infantil.',
+  'Little Ones': 'Niños y bebés',
+  '🍼 Little Ones': '🍼 Niños y bebés',
+  "Important: All content on this page is for educational purposes only. Always consult your child's paediatrician before starting any supplement or natural protocol.": 'Importante: todo el contenido de esta página tiene fines educativos únicamente. Consulta siempre al pediatra de tu hijo antes de iniciar cualquier suplemento o protocolo natural.',
+  "All content on this page is for educational purposes only. Always consult your child's paediatrician before starting any supplement or natural protocol.": 'Todo el contenido de esta página tiene fines educativos únicamente. Consulta siempre al pediatra de tu hijo antes de iniciar cualquier suplemento o protocolo natural.',
+  'Immune Support': 'Bienestar inmunitario',
+  '🛡️ Immune Support': '🛡️ Bienestar inmunitario',
+  'Better Sleep': 'Mejor sueño',
+  '😴 Better Sleep': '😴 Mejor sueño',
+  'Gut & Digestive Health': 'Salud intestinal y digestiva',
+  '🦠 Gut & Digestive Health': '🦠 Salud intestinal y digestiva',
+  'Focus & Development': 'Enfoque y desarrollo',
+  '🧠 Focus & Development': '🧠 Enfoque y desarrollo',
+  'Autism Support': 'Recursos sobre autismo',
+  '💙 Autism Support': '💙 Recursos sobre autismo',
+  'Articles for Little Ones': 'Artículos para niños y bebés',
+  'Natural Immune Support for Children: Safe, Gentle, Evidence-Based': 'Cuidado inmunitario natural para niños: seguro, suave y basado en evidencia',
+  'Vitamin D3, elderberry syrup, probiotics, and zinc — targeted nutritional support to reduce childhood illness frequency.': 'Vitamina D3, jarabe de saúco, probióticos y zinc: recursos nutricionales específicos para la salud infantil.',
+  "Probiotics for Children: A Complete Parent's Guide": 'Probióticos para niños: guía educativa para familias',
+  'The right strains, doses, and timing for children from infants to teens — and when probiotics matter most.': 'Cepas, dosis y tiempos adecuados para niños, desde bebés hasta adolescentes, y cuándo los probióticos pueden ser más relevantes.',
+  'Natural Sleep Support for Children: Gentle Approaches That Work': 'Orientación natural para el sueño infantil: enfoques suaves que pueden ayudar',
+  'Magnesium, chamomile tea, screen-free routines, and room environment — what actually helps children sleep.': 'Magnesio, té de manzanilla, rutinas sin pantallas y ambiente del dormitorio: factores que pueden favorecer el sueño infantil.',
+  'Folinic Acid & Autism: What the Research Shows': 'Ácido folínico y autismo: lo que muestra la investigación',
+  'Evidence-based guide on FRAA, folinic acid protocols, and natural biomedical approaches for children with ASD.': 'Guía educativa con respaldo científico sobre FRAA, ácido folínico y enfoques biomédicos complementarios para niños con TEA.',
+  'Natural, holistic approaches to keeping your pets healthy — from gut health and immunity to joint support and anxiety relief.': 'Enfoques naturales y holísticos para cuidar la salud de tus mascotas: salud intestinal, inmunidad, movilidad articular y manejo de ansiedad.',
+  'Pets Health': 'Salud de mascotas',
+  '🐾 Pets Health': '🐾 Salud de mascotas',
+  'Important: Always consult your veterinarian before starting any natural supplement protocol for your pet.': 'Importante: consulta siempre a tu veterinario antes de iniciar cualquier suplemento o protocolo natural para tu mascota.',
+  'Always consult your veterinarian before starting any natural supplement protocol for your pet.': 'Consulta siempre a tu veterinario antes de iniciar cualquier suplemento o protocolo natural para tu mascota.',
+  'Joint & Mobility': 'Articulaciones y movilidad',
+  '🦴 Joint & Mobility': '🦴 Articulaciones y movilidad',
+  'Anxiety & Stress': 'Ansiedad y estrés',
+  '😰 Anxiety & Stress': '😰 Ansiedad y estrés',
+  'Nutrition & Diet': 'Nutrición y alimentación',
+  '🍖 Nutrition & Diet': '🍖 Nutrición y alimentación',
+  'Natural Pet Wellness Guides': 'Guías de bienestar natural para mascotas',
+  'Probiotics for Pets: What the Research Actually Shows': 'Probióticos para mascotas: qué muestra la investigación',
+  'Strain-specific probiotics for dogs and cats — digestive health, immunity, skin conditions, and anxiety support.': 'Probióticos específicos por cepa para perros y gatos: salud digestiva, inmunidad, piel y bienestar emocional.',
+  'Natural Anxiety Relief for Dogs & Cats: Evidence-Based Options': 'Manejo natural de la ansiedad en perros y gatos: opciones basadas en evidencia',
+  'L-theanine, lavender aromatherapy, valerian root, and pressure wraps — what actually works for anxious pets.': 'L-teanina, aromaterapia con lavanda, raíz de valeriana y prendas de presión: opciones usadas para acompañar el manejo de la ansiedad en mascotas.',
+  'Joint & Mobility Support for Aging Pets: Natural Approaches That Work': 'Cuidado articular y movilidad para mascotas mayores: enfoques naturales que pueden ayudar',
+  'Fish oil, turmeric, green-lipped mussel, and glucosamine — the veterinary evidence and practical protocols.': 'Aceite de pescado, cúrcuma, mejillón de labio verde y glucosamina: evidencia veterinaria y pautas prácticas.',
+  'Ancient healing wisdom meets modern science. Evidence-based natural remedies for common health concerns — without pharmaceutical side effects.': 'La sabiduría tradicional se encuentra con la ciencia moderna. Recursos educativos sobre remedios naturales basados en evidencia para inquietudes comunes de salud.',
+  '🌿 Natural Remedies': '🌿 Remedios naturales',
+  'BROWSE BY CONCERN': 'EXPLORA POR NECESIDAD',
+  'Browse by Concern': 'Explora por necesidad',
+  'Longevity & Prevention': 'Longevidad y prevención',
+  '⚡ Longevity & Prevention': '⚡ Longevidad y prevención',
+  'Evidence-based natural strategies to prevent chronic disease, slow aging, protect your brain, and live a longer, healthier life — without pharmaceutical dependency.': 'Estrategias naturales basadas en evidencia para apoyar la prevención, el envejecimiento saludable, la salud cerebral y una vida más larga y plena.',
+  'No matches yet': 'Aún no hay resultados',
+  'Try sleep, autism, gut health, reiki, or recipes.': 'Prueba sueño, autismo, salud intestinal, reiki o recetas.',
   'Podcast': 'Podcast',
   'Podcast & Video': 'Podcast y video'
 };
 const STATIC_TEXT_ORIGINALS = new WeakMap();
+const STATIC_NODE_ORIGINALS = new WeakMap();
 
 function captureArticleOriginal(id, page) {
   if (ARTICLE_ORIGINALS[id] || !page) return;
@@ -5909,7 +6265,7 @@ function buildSpanishMediaHtml() {
     </div>
     ${mediaSection('Ciencia y neurociencia', [
       mediaCard('🧠', 'Huberman Lab', 'Dr. Andrew Huberman explica herramientas basadas en neurociencia para sueño, estrés, enfoque y rendimiento. Video en inglés.', 'Ciencia · Neurociencia · Sueño', 'https://www.youtube.com/@hubermanlab'),
-      mediaCard('🔬', 'FoundMyFitness – Dr. Rhonda Patrick', 'Análisis profundos sobre micronutrientes, sauna terapéutica y longevidad basada en evidencia. Video en inglés.', 'Ciencia · Longevidad · Nutrición', 'https://www.youtube.com/@FoundMyFitness'),
+      mediaCard('🔬', 'FoundMyFitness – Dr. Rhonda Patrick', 'Análisis profundos sobre micronutrientes, sauna terapéutica y longevidad con respaldo científico. Video en inglés.', 'Ciencia · Longevidad · Nutrición', 'https://www.youtube.com/@FoundMyFitness'),
       mediaCard('🏅', 'Dr. Sten Ekberg', 'Salud natural, keto, ayuno, resistencia a la insulina y salud cerebral desde una perspectiva integral. Video en inglés.', 'Salud holística · Keto · Ayuno', 'https://www.youtube.com/@drekberg')
     ])}
     ${mediaSection('Medicina funcional y longevidad', [
@@ -5938,7 +6294,7 @@ function buildSpanishMediaHtml() {
     ])}
     ${mediaSection('Movimiento y cuerpo', [
       mediaCard('🧘‍♀️', 'Yoga with Adriene', 'Yoga gratuito e inclusivo para todos los niveles, estrés, movilidad y movimiento consciente. Video en inglés.', 'Yoga · Movimiento consciente · Estrés', 'https://www.youtube.com/@yogawithadriene'),
-      mediaCard('🍌', 'Melissa Wood Health', 'Movimiento consciente, alimentación intuitiva, bienestar mental y vida consciente para mujeres. Video en inglés.', 'Salud de la mujer · Movimiento · Bienestar', 'https://www.youtube.com/@melissawoodhealth')
+      mediaCard('🍌', 'Melissa Wood Health', 'Movimiento consciente, alimentación intuitiva, bienestar mental y vida consciente para mujeres. Video en inglés.', 'Salud femenina · Movimiento · Bienestar', 'https://www.youtube.com/@melissawoodhealth')
     ])}
     ${mediaSection('Neurodiversidad y salud cerebral', [
       mediaCard('🧩', 'The Aspie World', 'Contenido sobre autismo, TDAH, TOC y neurodivergencia para adultos y familias. Video en inglés.', 'Autismo · TDAH · Neurodiversidad', 'https://www.youtube.com/@TheAspieWorld'),
@@ -5985,6 +6341,29 @@ function applyStaticSpanishText(lang) {
       el.textContent = original.trim().startsWith('←') ? '← ' + STATIC_ES_TEXT[normalized] : STATIC_ES_TEXT[normalized];
     }
   });
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      if (node.parentElement && node.parentElement.closest('script,style')) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(node => {
+    if (!STATIC_NODE_ORIGINALS.has(node)) STATIC_NODE_ORIGINALS.set(node, node.nodeValue);
+    const original = STATIC_NODE_ORIGINALS.get(node);
+    if (lang !== 'es') {
+      node.nodeValue = original;
+      return;
+    }
+    const trimmed = original.trim();
+    if (!trimmed) return;
+    const replacement = STATIC_ES_TEXT[trimmed];
+    if (replacement) {
+      node.nodeValue = original.replace(trimmed, replacement);
+    }
+  });
 }
 
 function normalizePages() {
@@ -6005,10 +6384,9 @@ function go(id, pushHistory) {
   const page = document.getElementById('page-' + id);
   if (page) {
     page.classList.add('active');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    if (pageTitles[id]) document.title = pageTitles[id];
-    document.querySelectorAll('.t-btn').forEach(b => b.classList.remove('active'));
-    document.querySelectorAll(`.t-btn[onclick*="'${id}'"]`).forEach(b => b.classList.add('active'));
+    scrollToTop();
+    updateSeoMeta(id);
+    updateNavigationState(id);
     applyArticleLanguage(id);
     applyMediaLanguage(id);
     setTimeout(triggerReveal, 80);
@@ -6021,6 +6399,24 @@ function go(id, pushHistory) {
 }
 
 function navTo(id) { go(id); }
+
+function updateNavigationState(id) {
+  document.querySelectorAll('.nav-active').forEach(el => el.classList.remove('nav-active'));
+  document.querySelectorAll('.t-btn').forEach(b => b.classList.remove('active'));
+  const selectors = [
+    `.t-btn[onclick*="'${id}'"]`,
+    `.nav-links a[onclick*="'${id}'"]`,
+    `.nav-links button[onclick*="'${id}'"]`,
+    `.d-lnk[onclick*="'${id}'"]`
+  ];
+  document.querySelectorAll(selectors.join(',')).forEach(el => {
+    el.classList.add(el.classList.contains('t-btn') ? 'active' : 'nav-active');
+  });
+}
+
+function scrollToTop() {
+  document.body.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
 
 window.addEventListener('popstate', function(e) {
   const id = (e.state && e.state.page) ? e.state.page : 'home';
@@ -6036,6 +6432,7 @@ window.addEventListener('DOMContentLoaded', function() {
     go(id, false);
     history.replaceState({ page: id }, document.title, PAGE_SLUGS[id] || path);
   } else {
+    updateSeoMeta('home');
     history.replaceState({ page: 'home' }, document.title, '/');
   }
 });
@@ -6072,6 +6469,8 @@ function setLang(lang) {
   applyStaticSpanishText(lang);
   applyArticleLanguage();
   applyMediaLanguage();
+  const activePage = document.querySelector('.page.active');
+  updateSeoMeta(activePage ? activePage.id.replace('page-', '') : 'home');
   toast(lang === 'es' ? '🇲🇽 Cambiado a Español' : '🇺🇸 Switched to English');
 }
 
@@ -6102,10 +6501,11 @@ document.querySelectorAll('.f-btn').forEach(b => b.addEventListener('click', fun
 // ══════════════════════════════════════
 // NAV SCROLL
 // ══════════════════════════════════════
-window.addEventListener('scroll', () =>
-  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10),
-  { passive: true }
-);
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 10);
+  const backTop = document.getElementById('back-top');
+  if (backTop) backTop.classList.toggle('show', window.scrollY > 520);
+}, { passive: true });
 
 // ══════════════════════════════════════
 // SCROLL REVEAL
