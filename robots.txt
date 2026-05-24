@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://holisticvox.com/sitemap.xml
+Sitemap: https://silent-bread-89b8.holisticvoxwellness.workers.dev/sitemap.xml
