@@ -1,0 +1,6 @@
+name = "silent-bread-89b8"
+compatibility_date = "2026-05-27"
+
+[assets]
+directory = "."
+not_found_handling = "404-page"
