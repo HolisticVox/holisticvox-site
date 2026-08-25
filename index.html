@@ -7094,6 +7094,7 @@ const PAGE_SLUGS = {
   'menshormones': '/mens-hormones', 'elderwellness': '/elder-wellness'
 };
 const SLUG_ALIASES = {
+  '/market':'shop', '/shop':'shop',
   '/wellness-hub':'wellnesshub',
   '/womens-health':'women', '/women':'women',
   '/mens-health':'men', '/men':'men',
@@ -7171,7 +7172,8 @@ window.addEventListener('DOMContentLoaded', function() {
   const params = new URLSearchParams(window.location.search);
   const requestedPage = params.get('page');
   const path = window.location.pathname;
-  const id = requestedPage || SLUG_TO_PAGE[path] || (path.length > 1 ? path.replace('/', '') : 'home');
+  const queryPage = requestedPage === 'market' ? 'shop' : requestedPage;
+  const id = queryPage || SLUG_TO_PAGE[path] || (path.length > 1 ? path.replace('/', '') : 'home');
   const page = document.getElementById('page-' + id);
   if (page && id !== 'home') {
     go(id, false);
