@@ -1,4 +1,9 @@
 .git
 .git/**
+.github
+.github/**
 .wrangler
 .wrangler/**
+.codex-route-backup
+.codex-route-backup/**
+HolisticVox-Spanish-Text-Review.md
