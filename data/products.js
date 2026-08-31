@@ -1,0 +1,72 @@
+const HV_PRODUCTS = [
+  {
+    id: 'ashwagandha-ksm66-organic',
+    productName: 'Ashwagandha KSM 66 Organic',
+    image: '/images/product_1.png',
+    category: 'supplements',
+    description: 'Representative current affiliate product used in homepage and article recommendations.',
+    affiliateNetwork: 'Amazon Associates',
+    affiliateUrl: 'https://amzn.to/4tVCHsU',
+    disclosure: 'HolisticVox may earn a commission when readers purchase through this link.',
+    recommendedFor: ['stress support', 'hormone education', 'sleep routines'],
+    evidenceNotes: 'Keep claims educational and article-specific; do not imply treatment or guaranteed outcomes.',
+    precautions: 'Review contraindications, medication interactions, pregnancy guidance, and thyroid considerations before expanding claims.',
+    status: 'active',
+    featured: true,
+    editorialRelationship: 'editorial recommendation with affiliate relationship',
+    paidPlacement: false
+  },
+  {
+    id: 'silver-hydrosol',
+    productName: 'Immune Support - Colloidal Silver, Bio-Active Silver Hydrosol',
+    image: '/images/product-silver-hydrosol.png',
+    category: 'silver',
+    description: 'Representative precious metal wellness product currently linked from market and article sections.',
+    affiliateNetwork: 'Amazon Associates',
+    affiliateUrl: 'https://amzn.to/3PANHgn',
+    disclosure: 'HolisticVox may earn a commission when readers purchase through this link.',
+    recommendedFor: ['immune education', 'precious metal wellness content'],
+    evidenceNotes: 'Requires especially careful medical review; avoid cure, antimicrobial, cancer, or disease-treatment claims.',
+    precautions: 'Document safety cautions and regulatory considerations before further promotion.',
+    status: 'active',
+    featured: true,
+    editorialRelationship: 'editorial recommendation with affiliate relationship',
+    paidPlacement: false
+  },
+  {
+    id: 'elderberry-zinc-vitamin-c-d3',
+    productName: "Elderberry Gummies with Zinc & Vitamin C and D3 (Nature's Way Sambucus)",
+    image: '/images/product-elderberry-natures-way.png',
+    category: 'immune',
+    description: 'Representative immune-support product used in homepage market cards.',
+    affiliateNetwork: 'Amazon Associates',
+    affiliateUrl: 'https://amzn.to/4fmZKYR',
+    disclosure: 'HolisticVox may earn a commission when readers purchase through this link.',
+    recommendedFor: ['immune education', 'family wellness'],
+    evidenceNotes: 'Frame as general wellness education, not prevention or treatment.',
+    precautions: 'Review added sugar, pediatric use, pregnancy use, and medication considerations.',
+    status: 'active',
+    featured: true,
+    editorialRelationship: 'editorial recommendation with affiliate relationship',
+    paidPlacement: false
+  },
+  {
+    id: 'touchstone-good-inside-store',
+    productName: 'Touchstone Essentials HolisticVox Store',
+    image: '/images/product-colloidal-bundle.png',
+    category: 'partner-store',
+    description: 'Representative non-Amazon partner store link currently present in market sections.',
+    affiliateNetwork: 'Touchstone Essentials',
+    affiliateUrl: 'https://holisticvox.thegoodinside.com/',
+    disclosure: 'HolisticVox may earn a commission when readers purchase through this partner store.',
+    recommendedFor: ['marketplace education', 'partner store planning'],
+    evidenceNotes: 'Keep partner commerce separate from editorial endorsement and future paid placements.',
+    precautions: 'Verify current partner terms before expanding or promoting.',
+    status: 'active',
+    featured: false,
+    editorialRelationship: 'partner affiliate relationship',
+    paidPlacement: false
+  }
+];
+
+window.HV_PRODUCTS = HV_PRODUCTS;
