@@ -33,13 +33,13 @@
   ];
 
   const baseRoutes = [
-    ['home', '/', 'HolisticVox - Natural Healing & Holistic Wellness', [], 'home', 'HolisticVox is a bilingual platform for evidence-based natural healing, holistic wellness, vetted practitioners, curated wellness products, and healing recipes.'],
+    ['home', '/', 'HolisticVox - Holistic Wellness Education', [], 'home', 'HolisticVox is a bilingual platform for evidence-informed wellness education, reviewed practitioner listings, curated resources, and nourishing recipes.'],
     ['about', '/about', 'About Us - HolisticVox', [], 'core'],
     ['start', '/start-here', 'Start Here - HolisticVox', [], 'core'],
     ['holistichealing', '/holistic-healing', 'Holistic Healing - HolisticVox', [], 'core'],
     ['wellnesshub', '/wellnesshub', 'Wellness Hub - HolisticVox', ['/wellness-hub'], 'core'],
     ['articles', '/articles', 'Wisdom Library - HolisticVox', [], 'content-index'],
-    ['recipes', '/recipes', 'Healing Recipes - HolisticVox', [], 'content-index'],
+    ['recipes', '/recipes', 'Nourishing Recipes - HolisticVox', [], 'content-index'],
     ['shop', '/market', 'HV Market - HolisticVox', ['/shop'], 'market'],
     ['media', '/podcast', 'Podcast & Video - HolisticVox', ['/media', '/podcasts', '/channels', '/videos', '/podcast-and-video'], 'media'],
     ['practitioners', '/practitioners', 'Practitioners - HolisticVox', [], 'directory'],

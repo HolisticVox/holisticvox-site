@@ -559,6 +559,8 @@ function submitContact() {
 function submitNewsletter() {
   const e = document.getElementById('nl-email');
   if (validate([e])) {
+    submitToMailerLite('', e.value.trim());
+    sessionStorage.setItem('hv_subscribed', '1');
     toast(T('nl_success'));
     e.value = '';
   }
@@ -613,29 +615,7 @@ function submitPopup() {
   if (!name) { document.getElementById('popup-name').focus(); return; }
   if (!email || !email.includes('@')) { document.getElementById('popup-email').focus(); return; }
 
-  // Send the subscriber to MailerLite (account 2227229, form 189980140483118888).
-  // Submitting through a hidden iframe avoids cross-origin errors on a static site.
-  try {
-    var FRAME = 'ml_hidden_frame';
-    var frame = document.getElementById(FRAME);
-    if (!frame) {
-      frame = document.createElement('iframe');
-      frame.name = FRAME; frame.id = FRAME; frame.style.display = 'none';
-      document.body.appendChild(frame);
-    }
-    var f = document.createElement('form');
-    f.method = 'POST';
-    f.action = 'https://assets.mailerlite.com/jsonp/2227229/forms/189980140483118888/subscribe';
-    f.target = FRAME; f.style.display = 'none';
-    function add(n, v) { var i = document.createElement('input'); i.type = 'hidden'; i.name = n; i.value = v; f.appendChild(i); }
-    add('fields[email]', email);
-    add('fields[name]', name);
-    add('ml-submit', '1');
-    add('anticsrf', 'true');
-    document.body.appendChild(f);
-    f.submit();
-    setTimeout(function () { if (f.parentNode) f.parentNode.removeChild(f); }, 1500);
-  } catch (e) {}
+  submitToMailerLite(name, email);
 
   // Show success state
     const safeName = escapeHTML(name);
@@ -653,5 +633,41 @@ function submitPopup() {
 
   // Mark as subscribed so popup doesn't show again this session
   sessionStorage.setItem('hv_subscribed', '1');
+}
+
+function submitToMailerLite(name, email) {
+  // Public MailerLite form endpoint; no private API keys are used on the site.
+  try {
+    var FRAME = 'ml_hidden_frame';
+    var frame = document.getElementById(FRAME);
+    if (!frame) {
+      frame = document.createElement('iframe');
+      frame.name = FRAME;
+      frame.id = FRAME;
+      frame.style.display = 'none';
+      document.body.appendChild(frame);
+    }
+    var f = document.createElement('form');
+    f.method = 'POST';
+    f.action = 'https://assets.mailerlite.com/jsonp/2227229/forms/189980140483118888/subscribe';
+    f.target = FRAME;
+    f.style.display = 'none';
+    function add(n, v) {
+      var i = document.createElement('input');
+      i.type = 'hidden';
+      i.name = n;
+      i.value = v;
+      f.appendChild(i);
+    }
+    add('fields[email]', email);
+    if (name) add('fields[name]', name);
+    add('ml-submit', '1');
+    add('anticsrf', 'true');
+    document.body.appendChild(f);
+    f.submit();
+    setTimeout(function () {
+      if (f.parentNode) f.parentNode.removeChild(f);
+    }, 1500);
+  } catch (e) {}
 }
 

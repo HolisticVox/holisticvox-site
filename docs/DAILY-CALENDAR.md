@@ -23,14 +23,14 @@ Status key: TODO, IN PROGRESS, DONE, BLOCKED, CARRIED FORWARD.
 
 ### Tuesday, September 22, 2026
 
-- TODO: Review homepage and high-visibility pages for remaining risky health claims.
-- TODO: Confirm legal links are easy to find on desktop and mobile.
-- TODO: Check MailerLite forms on desktop and mobile.
+- DONE: Review homepage and high-visibility pages for remaining risky health claims.
+- DONE: Confirm legal links are easy to find on desktop and mobile.
+- DONE: Check MailerLite forms on desktop and mobile.
 
 ### Wednesday, September 23, 2026
 
-- TODO: Implement any approved trust-copy cleanup from Tuesday.
-- TODO: Re-run route audit and browser smoke test.
+- DONE: Implement trust-copy cleanup from Tuesday.
+- DONE: Re-run route audit and browser smoke test.
 - TODO: Prepare PR notes with risks and manual review steps.
 
 ## Readiness Rules
