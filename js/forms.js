@@ -49,7 +49,7 @@ RULES:
 - Respond in whatever language they use (English or Spanish)
 - Keep replies to 1-3 sentences unless answering a question
 - When ALL info collected, write a clear summary starting with exactly: APPLICATION COMPLETE:
-- After summary say: "Nina will review your application and be in touch within 48 hours. We are so excited about the possibility of welcoming you to the HolisticVox community! "
+- After summary say: "We will review your application and be in touch within 48 hours. We are so excited about the possibility of welcoming you to the HolisticVox community! "
 
 START: Greet warmly, introduce yourself as Maya from HolisticVox, and ask for their name.`;
 
@@ -93,7 +93,7 @@ async function callMaya(msg){
       return;
     }
     const values=mayaHist.map(m=>m.content);
-    const summary=`APPLICATION COMPLETE:\nName: ${values[0]||''}\nSpecialty: ${values[1]||''}\nExperience: ${values[2]||''}\nEmail: ${values[3]||''}\nWebsite: ${values[4]||''}\nPractice: ${values[5]||''}\nTier: ${values[6]||''}\n\nNina will review your application and be in touch within 48 hours. We are so excited about the possibility of welcoming you to the HolisticVox community!`;
+    const summary=`APPLICATION COMPLETE:\nName: ${values[0]||''}\nSpecialty: ${values[1]||''}\nExperience: ${values[2]||''}\nEmail: ${values[3]||''}\nWebsite: ${values[4]||''}\nPractice: ${values[5]||''}\nTier: ${values[6]||''}\n\nWe will review your application and be in touch within 48 hours. We are so excited about the possibility of welcoming you to the HolisticVox community!`;
     mayaDone=true;
     addMsg(summary,'assistant');
     submitApp(summary);
@@ -321,7 +321,7 @@ Your role is to:
    - Payment does not buy editorial endorsement, credential approval, medical endorsement, or guaranteed clients
    - Checkout is not active until HolisticVox adds its hosted Stripe payment link
    - We're launching our practitioner directory soon &#x2014; they'll be among the first
-   - Nina Datshkovsky Ennis (founder) will personally review each application within 48 hours
+   - The HolisticVox team will review each application within 48 hours
 5. When you have all the info, summarize it and confirm with them, then say you're submitting their application
 
 PERSONALITY:
@@ -503,9 +503,9 @@ async function submitApplication() {
     <div class="sage-submitted">
       <div style="font-size:2.2rem;margin-bottom:12px"></div>
       <h4>Email Draft Opened</h4>
-      <p>Thank you, <strong>${safeSageName}</strong>! Please send the email draft that opened so Nina receives your practitioner application.</p>
+      <p>Thank you, <strong>${safeSageName}</strong>! Please send the email draft that opened so our team receives your practitioner application.</p>
       <p style="margin-top:8px">If the draft did not open, please email your details to <strong>holisticvoxwellness@gmail.com</strong>.</p>
-      <p style="margin-top:8px;color:#C4A228;font-weight:600">She'll personally review your profile and be in touch within 48 hours.</p>
+      <p style="margin-top:8px;color:#C4A228;font-weight:600">We will review your profile and be in touch within 48 hours.</p>
     </div>
   `;
 }
