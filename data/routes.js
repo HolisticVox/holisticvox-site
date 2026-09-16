@@ -43,6 +43,7 @@
     ['shop', '/market', 'HV Market - HolisticVox', ['/shop'], 'market'],
     ['media', '/podcast', 'Podcast & Video - HolisticVox', ['/media', '/podcasts', '/channels', '/videos', '/podcast-and-video'], 'media'],
     ['practitioners', '/practitioners', 'Practitioners - HolisticVox', [], 'directory'],
+    ['practitioner-thank-you', '/practitioner-thank-you', 'Practitioner Next Steps - HolisticVox', ['/practitioner-next-steps'], 'conversion'],
     ['book', '/book', 'Book a Session - HolisticVox', [], 'conversion'],
     ['contact', '/contact', 'Contact Us - HolisticVox', [], 'core'],
     ['privacy', '/privacy', 'Privacy Policy - HolisticVox', [], 'legal'],

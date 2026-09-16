@@ -6,6 +6,30 @@ function escapeHTML(value) {
   });
 }
 
+function initFeaturedPractitionerPayment() {
+  const btn = document.getElementById('featured-practitioner-payment');
+  const offer = window.HV_REVENUE && window.HV_REVENUE.featuredPractitioner;
+  if (!btn || !offer) return;
+
+  if (offer.stripePaymentLink && offer.status === 'active') {
+    btn.disabled = false;
+    btn.classList.remove('btn-ghost');
+    btn.classList.add('btn-accent');
+    const lang = typeof currentLang === 'undefined' ? 'en' : currentLang;
+    btn.innerHTML = lang === 'es' ? 'Pagar con Stripe' : 'Pay with Stripe';
+    btn.onclick = function() {
+      window.open(offer.stripePaymentLink, '_blank', 'noopener');
+    };
+  } else {
+    btn.disabled = true;
+    btn.onclick = null;
+    const lang = typeof currentLang === 'undefined' ? 'en' : currentLang;
+    btn.innerHTML = lang === 'es' ? 'Enlace de pago pendiente' : 'Payment link pending';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initFeaturedPractitionerPayment);
+
 const MAYA_SYSTEM=`You are Maya, the warm and professional practitioner intake coordinator for HolisticVox &#x2014; a bilingual holistic wellness platform founded by Nina Datshkovsky Ennis.
 
 YOUR ROLE: Guide holistic health practitioners through their application conversationally, warmly, and like a real human colleague &#x2014; never like a form or robot.
@@ -17,7 +41,7 @@ COLLECT THESE (one at a time, in natural order):
 4. Email address
 5. Website or social media URL (say it's optional)
 6. Brief description of their practice and ideal clients
-7. Listing tier preference: Basic ($10/month: directory profile, specialty tags, contact link, EN/ES listing) OR Featured ($25/month: top placement, homepage spotlight, social media feature, newsletter mention)
+7. Listing interest: Founding Featured Practitioner Listing ($29/month after review: enhanced profile, priority directory placement, website backlink, eligibility for newsletter/social visibility). Payment link is pending and no checkout is active yet.
 
 RULES:
 - ONE question at a time &#x2014; never multiple
@@ -25,7 +49,7 @@ RULES:
 - Respond in whatever language they use (English or Spanish)
 - Keep replies to 1-3 sentences unless answering a question
 - When ALL info collected, write a clear summary starting with exactly: APPLICATION COMPLETE:
-- After summary say: "Nina will review your application and be in touch within 48 hours. We are so excited about the possibility of welcoming you to the HolisticVox community! "
+- After summary say: "We will review your application and be in touch within 48 hours. We are so excited about the possibility of welcoming you to the HolisticVox community! "
 
 START: Greet warmly, introduce yourself as Maya from HolisticVox, and ask for their name.`;
 
@@ -36,7 +60,7 @@ const MAYA_QUESTIONS=[
   'What email address should Nina use to contact you?',
   'Do you have a website or social media link? You can write "skip" if not.',
   'Briefly describe your practice and the clients you love to help.',
-  'Which listing feels right: Basic ($10/month) or Featured ($25/month)?'
+  'Are you interested in the Founding Featured Practitioner Listing at $29/month after review?'
 ];
 
 function addMsg(text,role){
@@ -69,7 +93,7 @@ async function callMaya(msg){
       return;
     }
     const values=mayaHist.map(m=>m.content);
-    const summary=`APPLICATION COMPLETE:\nName: ${values[0]||''}\nSpecialty: ${values[1]||''}\nExperience: ${values[2]||''}\nEmail: ${values[3]||''}\nWebsite: ${values[4]||''}\nPractice: ${values[5]||''}\nTier: ${values[6]||''}\n\nNina will review your application and be in touch within 48 hours. We are so excited about the possibility of welcoming you to the HolisticVox community!`;
+    const summary=`APPLICATION COMPLETE:\nName: ${values[0]||''}\nSpecialty: ${values[1]||''}\nExperience: ${values[2]||''}\nEmail: ${values[3]||''}\nWebsite: ${values[4]||''}\nPractice: ${values[5]||''}\nTier: ${values[6]||''}\n\nWe will review your application and be in touch within 48 hours. We are so excited about the possibility of welcoming you to the HolisticVox community!`;
     mayaDone=true;
     addMsg(summary,'assistant');
     submitApp(summary);
@@ -291,12 +315,13 @@ Your role is to:
    - Languages spoken
    - Website or social media URL
    - Brief bio / about their practice
-   - Which listing tier they prefer: Basic ($10/month) or Featured ($25/month)
+   - Whether they are interested in the Founding Featured Practitioner Listing at $29/month after review
 4. Answer questions about HolisticVox honestly:
-   - Basic listing ($10/mo): directory profile, specialty tags, contact link, EN/ES listing
-   - Featured listing ($25/mo): top placement, homepage spotlight, social media feature, newsletter mention
+   - Founding Featured Practitioner Listing ($29/mo after review): enhanced profile, priority directory placement, website backlink, eligibility for newsletter and social visibility
+   - Payment does not buy editorial endorsement, credential approval, medical endorsement, or guaranteed clients
+   - Checkout is not active until HolisticVox adds its hosted Stripe payment link
    - We're launching our practitioner directory soon &#x2014; they'll be among the first
-   - Nina Datshkovsky Ennis (founder) will personally review each application within 48 hours
+   - The HolisticVox team will review each application within 48 hours
 5. When you have all the info, summarize it and confirm with them, then say you're submitting their application
 
 PERSONALITY:
@@ -324,7 +349,7 @@ const SAGE_QUESTIONS=[
   'Which languages do you speak with clients?',
   'Do you have a website or social media link? You can write "skip" if not.',
   'Please share a short bio or description of your practice.',
-  'Which listing tier do you prefer: Basic ($10/month) or Featured ($25/month)?'
+  'Are you interested in the Founding Featured Practitioner Listing at $29/month after review?'
 ];
 
 function toggleSage() {
@@ -478,9 +503,9 @@ async function submitApplication() {
     <div class="sage-submitted">
       <div style="font-size:2.2rem;margin-bottom:12px"></div>
       <h4>Email Draft Opened</h4>
-      <p>Thank you, <strong>${safeSageName}</strong>! Please send the email draft that opened so Nina receives your practitioner application.</p>
+      <p>Thank you, <strong>${safeSageName}</strong>! Please send the email draft that opened so our team receives your practitioner application.</p>
       <p style="margin-top:8px">If the draft did not open, please email your details to <strong>holisticvoxwellness@gmail.com</strong>.</p>
-      <p style="margin-top:8px;color:#C4A228;font-weight:600">She'll personally review your profile and be in touch within 48 hours.</p>
+      <p style="margin-top:8px;color:#C4A228;font-weight:600">We will review your profile and be in touch within 48 hours.</p>
     </div>
   `;
 }
